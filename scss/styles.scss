@@ -1,0 +1,22 @@
+@import 'base/normalize';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 1.2em 'Kumbh Sans', sans-serif;
+}
+
+.header {
+    background-color: #7477BF;
+}
+
+.nav {
+    background-color: #4D4C72;
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
+}
