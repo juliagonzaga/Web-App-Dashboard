@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web App Dashboard</title>
         <link rel="stylesheet" href="<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/toggle-switch.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body class="grid-container">
@@ -226,8 +227,28 @@
             <!-- local settings widget -->
             <section class="settings">
                 <h3>Settings</h3>
-                <!-- custom CSS toggle code-->
-                <!-- custom CSS toggle code-->
+                <label class="switch-light switch-ios" onclick="">
+                    <input type="checkbox">
+                    
+                    <p>Send Email Notifications</p>
+                    
+                    <span>
+                        <span>OFF</span>
+                        <span>ON</span>
+                        <a></a>
+                    </span>
+                </label>
+                <label class="switch-light switch-ios" onclick="">
+                    <input type="checkbox">
+                    
+                    <p>Send Profile to Public</p>
+                    
+                    <span>
+                        <span>OFF</span>
+                        <span>ON</span>
+                        <a></a>
+                    </span>
+                </label>
                 <select class="form-field" id="timezone">
                     <option disabled selected>Select a Timezone</option>
                     <option>Hawaii</option>
