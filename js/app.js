@@ -72,6 +72,16 @@ var barChart = new Chart(trafficBarChart, {
 //------------------------------------------//
 var doughnutChart = new Chart(mobileUsersChart, {
     type: 'doughnut',
-    data: data,
-    options: options
+    data: {
+        labels: ['Desktop', 'Phone', 'Tablet'],
+        datasets: [{
+            backgroundColor: ['#7377bf', '#74b1bf', '#81c98f'],
+            data: [10000, 2000, 2000],
+        }]
+    },
+    options: {
+        legend : {
+            position: 'right',
+        }
+    }
 });
