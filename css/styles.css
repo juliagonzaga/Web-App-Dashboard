@@ -342,15 +342,62 @@ template {
 }
 
 body {
-  font: 1.2em "Kumbh Sans", sans-serif;
+  font: 1em/1.2em "Raleway", sans-serif;
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 6px;
+  color: #fff;
   background-color: #7477BF;
+}
+.header__appName {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+.header__right img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.header__right h3 {
+  margin: 0;
+  padding-left: 4px;
+  font-weight: 500;
+  font-size: 0.8em;
+}
+
+.bell-notifications {
+  margin-right: 6px;
+  padding-top: 4px;
+  padding-right: 4px;
+  border-right: 1px solid #4D4C72;
 }
 
 .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
   background-color: #4D4C72;
+}
+.nav a {
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.nav a .icons {
+  width: 20px;
+  height: 20px;
 }
 
 .icons {
