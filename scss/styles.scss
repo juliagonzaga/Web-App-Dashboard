@@ -101,7 +101,6 @@ body {
             outline: none;
             border: 1px solid silver;
             border-radius: 3px;
-            overflow: hidden;
         }
 
         img {
@@ -118,10 +117,10 @@ body {
     color: silver;
 }
 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -188,23 +187,94 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .members-container {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 40px auto 50px;
+    align-content: center;
     align-items: center;
+    padding: 8px 0;
     font-size: .7em;
+    color: gray;
+    // border-bottom: 1px solid silver;
+
+    .time {
+        margin: 0;
+    }
 }
 
-.members-text { 
+.members-text {
+    font-size: .9em;
+    font-weight: 600;
+
     > p {
         margin: 0;
+        line-height: 1.2em;
+    }
+
+    > a {
+        text-decoration: none;
+        color: #7377BF;
     }
 }
 
 .profile-image {
     height: 30px;
     width: 30px;
+    margin: 0;
     border-radius: 50%;
     margin-right: 8px;
+}
+
+.right-arrow {
+    margin: 0;
+    text-align: right;
+
+    img {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+hr {
+    margin: 0;
+    height: 1px;
+    background-color: #dcdcdc;
+    border: none;
+}
+
+.widget-container {
+    display: flex;
+    flex-direction: column;
+
+    .form-field {
+        height: 30px;
+        padding: 12px;
+        font-size: .7em;
+        outline: none;
+        border: 1px solid gray;
+        border-radius: 3px;
+    }
+
+    .form-area {
+        margin: 12px 0;
+        height: 100px;
+        padding: 12px;
+        font-size: .7em;
+        outline: none;
+        border: 1px solid gray;
+        border-radius: 3px;
+    }
+}
+
+
+button {
+    height: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .7em;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    background-color: #7477BF;
 }
 
 .widget-container-full {
