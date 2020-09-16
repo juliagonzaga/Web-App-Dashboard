@@ -1,0 +1,27 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: #4D4C72;
+
+    &__links {
+        width: 20px;
+        height: 20px;    
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
+.traffic-nav {
+    margin: 0;
+    display: flex;
+    font-size: .6em;
+    font-weight: 600;
+    color: gray;
+    list-style: none;
+
+    &__link {
+        margin-left: 16px;
+    }
+}

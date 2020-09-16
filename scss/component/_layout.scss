@@ -1,0 +1,65 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 8px;
+    color: #fff;
+    background-color: #7477BF;
+   
+    &__profile {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.main-container {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.main-header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+}
+
+.traffic-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.social-card {
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+    padding: 12px;
+    margin: 12px;
+}
+
+.members-container {
+    display: grid;
+    grid-template-columns: 40px auto 50px;
+    align-content: center;
+    align-items: center;
+    padding: 8px 0;
+    font-size: .7em;
+    color: gray;
+
+    .time {
+        margin: 0;
+    }
+}
+
+.widget-container {
+    display: flex;
+    flex-direction: column;
+    
+    &-full,
+    &-half {
+        width: 100%;
+    }
+}

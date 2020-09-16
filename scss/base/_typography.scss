@@ -1,0 +1,58 @@
+.header__appName {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+.profile-name {
+    margin: 0;
+    padding-left: 6px;
+    font-weight: 500;
+    font-size: .6em;
+}
+
+.main-header__title {
+    margin: 0;
+    padding-right: 8px;
+    font-size: .9em;
+    font-weight: 600;
+    color: gray;
+}
+
+.title {
+    margin: 0;
+    font-size: .7em;
+    font-weight: 600;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.stats-name {
+    margin: 0;
+    color: #7377BF;
+    font-size: .8em;
+    font-weight: 700;
+    text-transform: inherit;
+}
+
+.stats-num {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 300;
+    color: gray;
+}
+
+.members-info {
+    font-size: .9em;
+    font-weight: 600;
+
+    > p {
+        margin: 0;
+        line-height: 1.2em;
+    }
+
+    > a {
+        text-decoration: none;
+        color: #7377BF;
+    }
+}

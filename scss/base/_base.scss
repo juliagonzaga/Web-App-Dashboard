@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 1em/1.2em 'Raleway', sans-serif;
+}
+
+::placeholder {
+    color: silver;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+hr {
+    margin: 0;
+    height: 1px;
+    background-color: #dcdcdc;
+    border: none;
+}

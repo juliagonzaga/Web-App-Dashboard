@@ -5,20 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web App Dashboard</title>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/toggle-switch.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body class="grid-container">
         <header class="header">
-            <div class="header__left">
+            <div>
                 <h1 class="header__appName"><strong>My</strong>App&trade;</h1>
             </div>
 
-            <div class="header__right">
-                <div class="bell-notifications">
+            <div class="header__profile">
+                <div class="bell">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="15" height="15">
-                        <g class="bell">
+                        <g class="bell__icon">
                             <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z" fill="#ffffff"/>
                         </g>
                     </svg>
@@ -26,32 +25,35 @@
                         <!-- notifications -->
                     </div>
                 </div>
-                <img src="images/me.jpg" alt="Julia's Image">
-                <h3>Julia Emily Gonzaga</h3>
+                <img class="profile-img" src="images/me.jpg" alt="Julia's Image">
+                <h3 class="profile-name">Julia Emily Gonzaga</h3>
             </div>
         </header>
 
         <nav class="nav">
-            <a href="#dashboard">
-                <img class="icons" src="icons/icon-dashboard.svg" alt="Dashboard Icon">
+            <a class="nav__links" href="#dashboard">
+                <img class="nav__icons" src="icons/icon-dashboard.svg" alt="Dashboard Icon">
             </a>
-            <a href="#">
-                <img class="icons" src="icons/icon-members.svg" alt="Members Icon">
+
+            <a class="nav__links" href="#">
+                <img class="nav__icons" src="icons/icon-members.svg" alt="Members Icon">
             </a>
-            <a href="#">
-                <img class="icons" src="icons/icon-visits.svg" alt="Visits Icon">
+
+            <a class="nav__links" href="#">
+                <img class="nav__icons" src="icons/icon-visits.svg" alt="Visits Icon">
             </a>
-            <a href="#">
-                <img class="icons" src="icons/icon-settings.svg" alt="Settings Icon">
+
+            <a class="nav__links" href="#">
+                <img class="nav__icons" src="icons/icon-settings.svg" alt="Settings Icon">
             </a>
         </nav>
 
         <main class="main-container">
-            <div class="main-header"> 
-                <h2 class="main-header__headline" id="dashboard">Dashboard</h2>
-                <div class="main-header__search">
-                    <input type="search" placeholder="Search" />
-                    <img src="icons/lens.png" alt="magnifying lens">
+            <div class="main-header">
+                <h2 class="main-header__title" id="dashboard">Dashboard</h2>
+                <div class="search">
+                    <input class="search__box" type="search" placeholder="Search" />
+                    <img class="search__icon" src="icons/lens.png" alt="magnifying lens">
                 </div>
             </div>
             
@@ -64,16 +66,16 @@
             <section class="traffic">
                 <div class="traffic-header">
                     <h3 class="title">Traffic</h3>
-                    <ul class="traffic-header__nav">
-                        <li class="traffic-header__nav-link">Hourly</li>
-                        <li class="traffic-header__nav-link">Daily</li>
-                        <li class="traffic-header__nav-link active">Weekly</li>
-                        <li class="traffic-header__nav-link">Monthly</li>
+                    <ul class="traffic-nav">
+                        <li class="traffic-nav__link">Hourly</li>
+                        <li class="traffic-nav__link">Daily</li>
+                        <li class="traffic-nav__link active">Weekly</li>
+                        <li class="traffic-nav__link">Monthly</li>
                     </ul>
                 </div>
                 <div class="widget-container-full">
                     <!-- element line graph will attach to -->
-                    <canvas id="traffic-chart" width="400" height="100"></canvas>
+                    <canvas id="traffic-chart" width="400" height="150"></canvas>
                 </div>
             </section>
 
@@ -82,7 +84,7 @@
                 <h3 class="title">Daily Traffic</h3>
                 <div class="widget-container-half">
                     <!-- element bar graph will attach to -->
-                    <canvas id="daily-chart" width="200" height="100"></canvas>
+                    <canvas id="daily-chart" width="400" height="200"></canvas>
                 </div>
             </section>
 
@@ -90,7 +92,7 @@
                 <h3 class="title">Mobile Users</h3>
                 <div class="widget-container-half">
                     <!-- element bar graph will attach to -->
-                    <canvas id="mobile-users-chart" width="200" height="100"></canvas>
+                    <canvas id="mobile-users-chart" width="200" height="80"></canvas>
                 </div>
             </section>
 
@@ -100,40 +102,51 @@
 
                 <div class="social-card twitter">
                     <div class="social-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30">
-                            <path d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z"/>
-                        </svg>                    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 291.319 291.319" class="twitter">
+                            <g xmlns="http://www.w3.org/2000/svg">
+                                <path d="M145.659 0c80.45 0 145.66 65.219 145.66 145.66 0 80.45-65.21 145.659-145.66 145.659S0 226.109 0 145.66C0 65.219 65.21 0 145.659 0z" fill="#7377bf" data-original="#26a6d1"/>
+                                <path d="M236.724 98.129c-6.363 2.749-13.21 4.597-20.392 5.435 7.338-4.27 12.964-11.016 15.613-19.072a71.965 71.965 0 01-22.55 8.366c-6.473-6.691-15.695-10.87-25.909-10.87-19.591 0-35.486 15.413-35.486 34.439 0 2.704.31 5.335.919 7.857-29.496-1.438-55.66-15.158-73.157-35.996a33.46 33.46 0 00-4.807 17.315c0 11.944 6.263 22.504 15.786 28.668-5.826-.182-11.289-1.721-16.086-4.315v.437c0 16.696 12.235 30.616 28.476 33.784a36.707 36.707 0 01-9.35 1.211c-2.285 0-4.506-.209-6.673-.619 4.515 13.692 17.625 23.651 33.165 23.925-12.153 9.249-27.457 14.748-44.089 14.748-2.868 0-5.69-.164-8.476-.482 15.722 9.777 34.367 15.485 54.422 15.485 65.292 0 100.997-52.51 100.997-98.029l-.1-4.461a70.838 70.838 0 0017.697-17.826z" fill="#fff" data-original="#ffffff"/>
+                            </g>
+                        </svg>                   
                     </div>
 
-                    <div class="social-text">
-                        <p class="title">Twitter</p>
-                        <p class="numbers">10,345</p>
+                    <div class="social-stats">
+                        <p class="stats-name">Twitter</p>
+                        <p class="stats-num">10,345</p>
                     </div>
                 </div>
 
                 <div class="social-card facebook">
                     <div class="social-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50">
-                            <path d="M40.43 21.739h-7.645v-5.014c0-1.883 1.248-2.322 2.127-2.322h5.395V6.125l-7.43-.029c-8.248 0-10.125 6.174-10.125 10.125v5.518h-4.77v8.53h4.77v24.137h10.033V30.269h6.77l.875-8.53z"/>
-                        </svg>                                   
+                        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 291.319 291.319" class="facebook">
+                            <g xmlns="http://www.w3.org/2000/svg">
+                                <path d="M145.659 0c80.45 0 145.66 65.219 145.66 145.66 0 80.45-65.21 145.659-145.66 145.659S0 226.109 0 145.66C0 65.219 65.21 0 145.659 0z" fill="#7377bf" data-original="#3b5998"/>
+                                <path d="M163.394 100.277h18.772v-27.73h-22.067v.1c-26.738.947-32.218 15.977-32.701 31.763h-.055v13.847h-18.207v27.156h18.207v72.793h27.439v-72.793h22.477l4.342-27.156h-26.81v-8.366c0-5.335 3.55-9.614 8.603-9.614z" fill="#fff" data-original="#ffffff"/>
+                            </g>
+                        </svg>                                 
                     </div>
 
-                    <div class="social-text">
-                        <p class="title">Facebook</p>
-                        <p class="numbers">8,739</p>
+                    <div class="social-stats">
+                        <p class="stats-name">Facebook</p>
+                        <p class="stats-num">8,739</p>
                     </div>
                 </div>
 
                 <div class="social-card google">
                     <div class="social-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20">
-                            <path d="M17.7 25.7c0-.3 0-.5-.1-.8-.1-.2-.1-.5-.2-.7-.1-.2-.2-.4-.3-.7-.2-.2-.3-.4-.4-.6-.1-.2-.3-.3-.5-.6l-.5-.5c-.1-.1-.3-.3-.6-.5s-.5-.4-.6-.4-.3-.2-.6-.4-.5-.4-.6-.4h-1c-.7 0-1.4 0-2 .1-.7.1-1.4.2-2.1.5-.7.2-1.3.5-1.9.9s-1 .8-1.3 1.4c-.3.6-.5 1.3-.5 2.1 0 .9.2 1.7.7 2.3.5.7 1.1 1.2 1.8 1.6s1.5.7 2.3.9 1.6.3 2.4.3c.8 0 1.5-.1 2.2-.2.7-.2 1.3-.4 1.9-.8.6-.3 1.1-.8 1.4-1.4.3-.6.5-1.3.5-2.1zM15.4 9.1c0-.8-.1-1.6-.3-2.5-.2-.9-.5-1.7-.9-2.5s-.9-1.5-1.6-2c-.7-.5-1.5-.8-2.3-.8-1.2 0-2.1.4-2.8 1.3-.7.9-1 1.9-1 3.2 0 .6.1 1.2.2 1.9s.4 1.3.7 2c.3.7.7 1.3 1.1 1.8.4.5.9 1 1.5 1.3.6.3 1.2.5 1.9.5 1.2 0 2.1-.4 2.7-1.2.5-.7.8-1.7.8-3zM12.9 0h8.4l-2.6 1.5h-2.6c.9.6 1.6 1.4 2.1 2.4S19 6 19 7.1c0 .9-.1 1.8-.4 2.5-.3.7-.7 1.3-1.1 1.8-.4.4-.8.9-1.3 1.2-.4.4-.8.8-1.1 1.2-.3.4-.4.8-.4 1.3 0 .3.1.7.3 1 .2.3.5.6.8.9.3.3.7.6 1.1.9.4.3.8.7 1.2 1.1.4.4.8.8 1.1 1.3.3.5.6 1 .8 1.6.2.6.3 1.3.3 2 0 2.1-.9 3.9-2.7 5.4-1.9 1.7-4.6 2.5-8.1 2.5-.8 0-1.5-.1-2.3-.2-.8-.1-1.6-.3-2.3-.6-.8-.3-1.5-.7-2.1-1.1-.6-.4-1.1-1-1.5-1.7C1 27.6.8 26.9.8 26c0-.8.2-1.6.7-2.6.4-.8 1-1.5 1.8-2.1.8-.6 1.8-1.1 2.8-1.4 1-.3 2-.5 3-.7.9-.1 1.9-.2 2.9-.3-.8-1.1-1.2-2-1.2-2.9v-.5c0-.1.1-.3.1-.4 0-.1.1-.2.2-.4s.1-.3.1-.4c-.5.1-1 .1-1.3.1-1.9 0-3.5-.6-4.9-1.9-1.4-1.3-2-2.8-2-4.7C3 6 3.6 4.4 4.8 3 6 1.7 7.5.8 9.3.4c1.2-.3 2.4-.4 3.6-.4zm19.9 4.9v2.5h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9h4.9z"/>
-                        </svg>                                   
+                        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 473.939 473.939" class="google">
+                            <circle xmlns="http://www.w3.org/2000/svg" cx="236.969" cy="236.967" r="236.967" fill="#7377bf" data-original="#cc3731"/>
+                            <path xmlns="http://www.w3.org/2000/svg" d="M404.527 69.384c92.542 92.542 92.546 242.588-.004 335.137-92.546 92.542-242.595 92.542-335.137 0L404.527 69.384z" fill="#7377bf" data-original="#bc2b2a"/>
+                            <path xmlns="http://www.w3.org/2000/svg" d="M471.95 267.16L336.396 131.606l-28.06 28.06-29.938-29.938-38.013 6.93-13.122 5.545-42.379-8.037-38.043 23.697-7.296 72.067 59.244 59.244-36.355 7.76-34.926 16.838-9.167 55.85 103.808 103.812c4.905.299 9.83.505 14.806.505 120.635-.004 220.147-90.17 234.995-206.779z" fill="#7377bf" data-original="#a52728"/>
+                            <g xmlns="http://www.w3.org/2000/svg">
+                                <path d="M235.648 141.99c2.193 1.355 4.636 3.33 7.36 5.931 2.615 2.713 5.171 6.05 7.682 9.991 2.402 3.734 4.531 8.127 6.391 13.212 1.523 5.078 2.286 11.012 2.286 17.788-.198 12.423-2.945 22.357-8.232 29.818a93.06 93.06 0 01-8.217 9.998 353.778 353.778 0 01-10.23 9.31c-2.08 2.144-3.981 4.569-5.744 7.285-2.065 2.821-3.102 6.092-3.102 9.815 0 3.641 1.059 6.623 3.188 8.988 1.792 2.26 3.555 4.239 5.253 5.934l11.783 9.654c7.315 6.002 13.736 12.572 19.255 19.805 5.197 7.353 7.899 16.947 8.131 28.797 0 16.827-7.439 31.727-22.301 44.729-15.394 13.448-37.639 20.382-66.694 20.827-24.325-.221-42.484-5.407-54.484-15.536-12.093-9.478-18.159-20.801-18.159-33.99 0-6.417 1.961-13.594 5.92-21.482 3.809-7.876 10.728-14.817 20.752-20.793 11.237-6.413 23.053-10.702 35.438-12.853 12.258-1.792 22.432-2.818 30.54-3.035a74.514 74.514 0 01-6.698-10.559c-2.286-3.637-3.42-8.019-3.42-13.111 0-3.065.43-5.635 1.302-7.667.76-2.17 1.474-4.135 2.118-5.964-3.944.445-7.667.681-11.147.681-18.492-.236-32.583-6.05-42.278-17.448-10.159-10.63-15.233-22.993-15.233-37.1 0-17.059 7.184-32.52 21.571-46.413 9.871-8.127 20.127-13.418 30.765-15.925 10.537-2.144 20.411-3.214 29.616-3.214h69.451l-21.444 12.524h-21.422v.003zm13.407 199.893c0-8.819-2.874-16.486-8.61-23.034-6.092-6.208-15.596-13.826-28.535-22.874-2.223-.236-4.819-.341-7.798-.341-1.77-.217-6.305 0-13.598.677-7.188 1.018-14.548 2.657-22.065 4.917-1.774.674-4.251 1.695-7.457 3.046-3.203 1.471-6.466 3.566-9.789 6.271-3.207 2.821-5.92 6.32-8.12 10.511-2.556 4.408-3.809 9.714-3.809 15.918 0 12.206 5.512 22.26 16.565 30.17 10.514 7.899 24.879 11.962 43.132 12.198 16.363-.236 28.86-3.843 37.474-10.844 8.408-6.903 12.61-15.76 12.61-26.615zm-48.407-101.791c9.141-.337 16.759-3.63 22.847-9.856 2.945-4.412 4.831-8.939 5.669-13.579.505-4.64.763-8.535.763-11.716 0-13.68-3.506-27.502-10.507-41.403-3.289-6.668-7.615-12.112-12.977-16.295-5.474-3.944-11.768-6.047-18.877-6.275-9.414.228-17.227 4.019-23.472 11.379-5.261 7.689-7.779 16.292-7.543 25.8 0 12.554 3.667 25.613 11.016 39.203 3.562 6.335 8.146 11.708 13.788 16.123 5.624 4.419 12.049 6.619 19.293 6.619zM372.59 167.4h-36.433v-36.452h-17.658V167.4h-36.434v17.65h36.434v36.438h17.658V185.05h36.433z" fill="#fff" data-original="#ffffff"/>
+                            </g>
+                        </svg>                                 
                     </div>
 
-                    <div class="social-text">
-                        <p class="title">Google+</p>
-                        <p class="numbers">2,530</p>
+                    <div class="social-stats">
+                        <p class="stats-name">Google+</p>
+                        <p class="stats-num">2,530</p>
                     </div>
                 </div>
             </div>
@@ -143,8 +156,8 @@
                 <h3 class="title">New Members</h3>
 
                 <div class="members-container">
-                    <img src="images/kier.jpg" class="profile-image">
-                    <div class="members-text">
+                    <img src="images/kier.jpg" class="members-image">
+                    <div class="members-info">
                         <p>Kier Borromeo</p>
                         <a href="#">seraphipod@gmail.com</a>
                     </div>
@@ -152,8 +165,8 @@
                 </div> <hr>
 
                 <div class="members-container">
-                    <img src="images/jess.jpg" class="profile-image">
-                    <div class="members-text">
+                    <img src="images/jess.jpg" class="members-image">
+                    <div class="members-info">
                         <p>Jess Vista</p>
                         <a href="#">just_ice2231@yahoo.com</a>
                     </div>
@@ -161,8 +174,8 @@
                 </div> <hr>
 
                 <div class="members-container">
-                    <img src="images/gama.jpg" class="profile-image">
-                    <div class="members-text">
+                    <img src="images/gama.jpg" class="members-image">
+                    <div class="members-info">
                         <p>Gama Rae</p>
                         <a href="#">gamaraec@gmail.com</a>
                     </div>
@@ -170,8 +183,8 @@
                 </div> <hr>
 
                 <div class="members-container">
-                    <img src="images/jc.jpg" class="profile-image">
-                    <div class="members-text">
+                    <img src="images/jc.jpg" class="members-image">
+                    <div class="members-info">
                         <p>JC Ricaro</p>
                         <a href="#">jcricaro@gmail.com</a>
                     </div>
@@ -184,8 +197,8 @@
                 <h3 class="title">Recent Activity</h3>
 
                 <div class="members-container">
-                    <img src="images/ryan.jpg" class="profile-image">
-                    <div class="members-text">
+                    <img src="images/ryan.jpg" class="members-image">
+                    <div class="members-info">
                         <p>Ryan Gunawardana commented on MyApp's SEO Tips</p>
                         <p>4 hours ago</p>
                     </div>
@@ -195,8 +208,8 @@
                 </div> <hr>
 
                 <div class="members-container">
-                    <img src="images/melisa.jpg" class="profile-image">
-                    <div class="members-text">
+                    <img src="images/melisa.jpg" class="members-image">
+                    <div class="members-info">
                         <p>Melisa Mei like the post Facebook's Changes for 2021</p>
                         <p>5 hours ago</p>
                     </div>
@@ -206,8 +219,8 @@
                 </div> <hr>
 
                 <div class="members-container">
-                    <img src="images/jayson.jpg" class="profile-image">
-                    <div class="members-text">
+                    <img src="images/jayson.jpg" class="members-image">
+                    <div class="members-info">
                         <p>Jayson Ignalig commented on Facebook's Changes for 2021</p>
                         <p>5 hours ago</p>
                     </div>
@@ -217,8 +230,8 @@
                 </div> <hr>
 
                 <div class="members-container">
-                    <img src="images/aid.jpg" class="profile-image">
-                    <div class="members-text">
+                    <img src="images/aid.jpg" class="members-image">
+                    <div class="members-info">
                         <p>Adria Jay posted on MyApp's SEO Tips</p>
                         <p>1 day ago</p>
                     </div>
@@ -246,7 +259,7 @@
                     
                     <p>Send Email Notifications</p>
                     
-                    <span class="toggle-switch">
+                    <span>
                         <span>OFF</span>
                         <span>ON</span>
                         <a></a>

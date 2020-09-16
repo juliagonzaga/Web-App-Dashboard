@@ -13,7 +13,7 @@ var lineChart = new Chart(trafficLineChart, {
             data: [0, 750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
             backgroundColor: 'rgba(115,119,191,0.2)',
             borderColor: 'rgba(115,119,191,0.7)',
-            pointRadius: 6,
+            pointRadius: 3,
             pointBackgroundColor: 'rgba(255,255,255,1)',
             pointBorderColor: 'rgba(115,119,191,1)',
             pointBorderWidth: 2,
@@ -30,10 +30,18 @@ var lineChart = new Chart(trafficLineChart, {
                     max: 2500,
                     stepSize: 500,
                     beginAtZero: true,
+                    minor: {
+                        fontSize: 8
+                    }
                 }
             }],
             xAxes: [{
-                labels: ['wk 1', 'wk 2', 'wk 3', 'wk 4', 'wk 5', 'wk 6', 'wk 7', 'wk 8', 'wk 9', 'wk 10', 'wk 11', 'wk 12']
+                labels: ['wk 1', 'wk 2', 'wk 3', 'wk 4', 'wk 5', 'wk 6', 'wk 7', 'wk 8', 'wk 9', 'wk 10', 'wk 11', 'wk 12'],
+                ticks: {
+                    minor: {
+                        fontSize: 8
+                    }
+                }
             }]
         }
     }
@@ -51,7 +59,7 @@ var barChart = new Chart(trafficBarChart, {
     },
     options: {
         legend: {
-            display: false
+            display: false,
         },
         scales: {
             yAxes: [{
@@ -59,10 +67,18 @@ var barChart = new Chart(trafficBarChart, {
                     max: 250,
                     stepSize: 50,
                     beginAtZero: true,
+                    minor: {
+                        fontSize: 8
+                    }
                 }
             }],
             xAxes: [{
-                labels: ['S', 'M', 'T', 'W', 'T', 'F']
+                labels: ['S', 'M', 'T', 'W', 'T', 'F'],
+                ticks: {
+                    minor: {
+                        fontSize: 8
+                    }
+                }
             }]
         }
     }
@@ -73,15 +89,21 @@ var barChart = new Chart(trafficBarChart, {
 var doughnutChart = new Chart(mobileUsersChart, {
     type: 'doughnut',
     data: {
-        labels: ['Desktop', 'Phone', 'Tablet'],
+        labels: ['Phone', 'Tablet', 'Desktop'],
         datasets: [{
-            backgroundColor: ['#7377bf', '#74b1bf', '#81c98f'],
-            data: [10000, 2000, 2000],
+            backgroundColor: ['#81c98f', '#74b1bf', '#7377bf'],
+            data: [3000, 3000, 10000],
+            borderWidth: 0
         }]
     },
     options: {
         legend : {
             position: 'right',
-        }
+            labels: {
+                boxWidth: 20,
+                fontSize: 8,
+            }
+        },
+        rotation: -0.7 * Math.PI
     }
 });
