@@ -35,9 +35,10 @@
 .social-card {
     display: flex;
     justify-content: center;
+    width: 100%;
     border: 1px solid gray;
     padding: 12px;
-    margin: 12px;
+    margin-bottom: 12px;
 }
 
 .members-container {
