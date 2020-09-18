@@ -13,16 +13,21 @@
     }
 }
 
-.main-container {
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
 .main-header {
     display: flex;
     align-content: center;
     justify-content: space-between;
-    padding-bottom: 12px;
+}
+
+.traffic,
+.daily,
+.mobile-users,
+.social-container,
+.members,
+.message,
+.settings {
+    padding: 12px 8px 12px 8px;
+    border-bottom: 1px solid silver;
 }
 
 .traffic-header {
@@ -35,10 +40,13 @@
 .social-card {
     display: flex;
     justify-content: center;
-    width: 100%;
-    border: 1px solid gray;
+    width: 80%;
+    margin: auto;
     padding: 12px;
     margin-bottom: 12px;
+    border: 1px solid silver;
+    border-radius: 3px;
+    background-color: whitesmoke;
 }
 
 .members-container {
