@@ -1,0 +1,21 @@
+.alert {
+    padding: 12px 8px 0 8px;
+
+    &-banner {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        font-size: .5em;
+        color: #fff;
+        background-color: #7377bf;
+        border-radius: 3px;
+    
+        > p {
+            margin: 0;
+        }
+
+        &-close:hover {
+            cursor: pointer;
+        }
+    }
+}

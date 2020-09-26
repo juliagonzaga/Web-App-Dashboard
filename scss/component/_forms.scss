@@ -1,18 +1,27 @@
-#userField {
+.form-field {
     height: 30px;
-    padding: 12px;
+    padding-left: 12px;
     font-size: .7em;
     outline: none;
-    border: 1px solid gray;
-    border-radius: 3px;
+    border: 1px solid silver;
+    border-radius: 4px;
+    background-color: #FBFBFB;
 }
 
-.form-area {
+.form-area{
     margin: 12px 0;
     height: 100px;
     padding: 12px;
     font-size: .7em;
     outline: none;
-    border: 1px solid gray;
-    border-radius: 3px;
+    border: 1px solid silver;
+    border-radius: 4px;
+    background-color: #FBFBFB;
+}
+
+#timezone {
+    width: 100%;
+    margin: 12px 0;
+    color: gray;
+    background-image: url('../../icons/arrow.png');
 }

@@ -1,11 +1,29 @@
 
-var trafficLineChart = document.getElementById('traffic-chart');
-var trafficBarChart = document.getElementById('daily-chart');
-var mobileUsersChart = document.getElementById('mobile-users-chart');
+const trafficLineChart = document.getElementById('traffic-chart');
+const trafficBarChart = document.getElementById('daily-chart');
+const mobileUsersChart = document.getElementById('mobile-users-chart');
+let alertBanner = document.getElementById('alert');
+
+//------------create the HTML for the banner---------------//
+alertBanner.innerHTML = 
+    `
+    <div class="alert-banner">
+        <p><strong>Alert</strong> You have <strong>6</strong> overdue tasks to complete.</p>
+        <p class="alert-banner-close">x</p>
+    </div>
+    `
+    
+alertBanner.addEventListener('click', e => {
+    const element = e.target;
+
+    if (element.classList.contains("alert-banner-close")) {
+        alertBanner.style.display = "none"
+    }
+});
 
 //--------------- LINE CHART ---------------//
 //------------------------------------------//
-var lineChart = new Chart(trafficLineChart, {
+let lineChart = new Chart(trafficLineChart, {
     type: 'line',
     data: {
         datasets: [{
@@ -49,7 +67,7 @@ var lineChart = new Chart(trafficLineChart, {
 
 //--------------- BAR CHART ---------------//
 //------------------------------------------//
-var barChart = new Chart(trafficBarChart, {
+let barChart = new Chart(trafficBarChart, {
     type: 'bar',
     data: {
         datasets: [{
@@ -86,7 +104,7 @@ var barChart = new Chart(trafficBarChart, {
 
 //--------------- DOUGHNUT CHART ---------------//
 //------------------------------------------//
-var doughnutChart = new Chart(mobileUsersChart, {
+let doughnutChart = new Chart(mobileUsersChart, {
     type: 'doughnut',
     data: {
         labels: ['Phone', 'Tablet', 'Desktop'],
@@ -100,8 +118,8 @@ var doughnutChart = new Chart(mobileUsersChart, {
         legend : {
             position: 'right',
             labels: {
-                boxWidth: 20,
-                fontSize: 8,
+                boxWidth: 12,
+                fontSize: 12,
             }
         },
         rotation: -0.7 * Math.PI

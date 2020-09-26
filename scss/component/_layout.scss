@@ -39,14 +39,21 @@
 
 .social-card {
     display: flex;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
+    justify-content: flex-start;
+    align-items: center;
+    width: 200px;
+    height: 70px;
     padding: 12px;
+    margin: auto;
     margin-bottom: 12px;
     border: 1px solid silver;
-    border-radius: 3px;
-    background-color: whitesmoke;
+    border-radius: 4px;
+    background-color: #FBFBFB;
+}
+
+.social-stats {
+    display: flex;
+    flex-direction: column;
 }
 
 .members-container {

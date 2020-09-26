@@ -3,7 +3,7 @@
 }
 
 body {
-    font: 1em/1.2em 'Raleway', sans-serif;
+    font: 1em 'Raleway', sans-serif;
 }
 
 ::placeholder {
@@ -22,4 +22,10 @@ hr {
     height: 1px;
     background-color: #dcdcdc;
     border: none;
+}
+
+.form-field {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
 }
