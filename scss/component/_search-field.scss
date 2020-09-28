@@ -1,9 +1,9 @@
 .search {
     position: relative;
     padding: 8px 8px 8px 72px;
-    border-left: 1px solid silver;
-    border-bottom: 1px solid silver;
-    background-color: #FBFBFB;
+    border-left: 1px solid $color-silver;
+    border-bottom: 1px solid $color-silver;
+    background-color: $color-snow;
 
     &__box {
         width: 150px;
@@ -11,7 +11,7 @@
         padding: 6px;
         font-size: .6em;
         outline: none;
-        border: 1px solid silver;
+        border: 1px solid $color-silver;
         border-radius: 3px;
     }
 }

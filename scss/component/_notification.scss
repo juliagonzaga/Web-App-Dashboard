@@ -3,18 +3,18 @@
     margin-right: 8px;
     padding-top: 4px;
     padding-right: 6px;
-    border-right: 1px solid #4D4C72 ;
+    border-right: 1px solid $color-secondary;
 }
 
-.badge {
+#badge {
     position: absolute;
     top: 4px;
     left: 10px;
     width: 8px;
     height: 8px;
-    border: 1px solid #7477BF;
+    border: 1px solid $color-primary;
     border-radius: 50%;
-    background-color: #81c98f;
+    background-color: $color-accent;
 }
 
 .notifications {
@@ -24,8 +24,8 @@
     min-width: 200px;
     padding: 8px;
     font-size: .6em;
-    background-color: #7477BF;
-    border: 1px solid #fff;
+    background-color: $color-primary;
+    border: 1px solid $color-white;
     display: none;
 
     &__list {
@@ -42,7 +42,7 @@
 
             &::before {
                 content: '\2022';
-                color: #81c98f;
+                color: $color-accent;
                 font-size: 3.5em;
             }
         }

@@ -3,9 +3,9 @@
     padding-left: 12px;
     font-size: .7em;
     outline: none;
-    border: 1px solid silver;
+    border: 1px solid $color-silver;
     border-radius: 4px;
-    background-color: #FBFBFB;
+    background-color: $color-snow;
 }
 
 .form-area{
@@ -14,14 +14,14 @@
     padding: 12px;
     font-size: .7em;
     outline: none;
-    border: 1px solid silver;
+    border: 1px solid $color-silver;
     border-radius: 4px;
-    background-color: #FBFBFB;
+    background-color: $color-snow;
 }
 
 #timezone {
     width: 100%;
     margin: 12px 0;
-    color: gray;
-    background-image: url('../../icons/arrow.png');
+    color: $color-gray;
+    background: url('../icons/down-arrow.png') no-repeat 95%/12px;
 }

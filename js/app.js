@@ -3,6 +3,8 @@ const trafficLineChart = document.getElementById('traffic-chart');
 const trafficBarChart = document.getElementById('daily-chart');
 const mobileUsersChart = document.getElementById('mobile-users-chart');
 const alertBanner = document.getElementById('alert');
+const bell = document.getElementById('bell');
+const badge = document.getElementById('badge');
 const notifications = document.getElementById('notifications');
 
 //------------create the HTML for the banner---------------//
@@ -18,14 +20,15 @@ alertBanner.addEventListener('click', e => {
     const element = e.target;
 
     if (element.classList.contains("alert-banner-close")) {
-        alertBanner.style.display = "none"
+        alertBanner.style.display = 'none';
     }
 });
 
 //------------NOTIFICATIONS---------------//
-// notifications.addEventListener('click',  e => {
-
-// });
+bell.addEventListener('click', e => {
+    badge.style.display = 'none';
+    notifications.style.display = '';
+});
 
 
 //--------------- LINE CHART ---------------//

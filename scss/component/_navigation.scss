@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4D4C72;
+    background-color: $color-secondary;
 
     &__links {
         width: 20px;
@@ -31,7 +31,7 @@
     display: flex;
     font-size: .5em;
     font-weight: 600;
-    color: gray;
+    color: $color-gray;
     list-style: none;
 
     &__link {

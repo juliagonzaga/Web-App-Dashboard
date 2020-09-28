@@ -17,21 +17,21 @@
     padding-left: 8px;
     font-size: .8em;
     font-weight: 600;
-    color: gray;
+    color: $color-gray;
 }
 
 .title {
     margin: 0;
     padding-bottom: 12px;
-    font-size: .6em;
+    font-size: .7em;
     font-weight: 600;
-    color: gray;
+    color: $color-gray;
     text-transform: uppercase;
 }
 
 .stats-name {
     margin: 0;
-    color: #7377BF;
+    color: $color-primary;
     font-size: .7em;
     font-weight: 700;
     text-transform: inherit;
@@ -40,7 +40,7 @@
 .stats-num {
     margin: 0;
     font: 300 1.8em/1em 'Open Sans', sans-serif;
-    color: gray;
+    color: $color-gray;
 }
 
 .members-info {
@@ -54,6 +54,6 @@
 
     > a {
         text-decoration: none;
-        color: #7377BF;
+        color: $color-primary;
     }
 }
