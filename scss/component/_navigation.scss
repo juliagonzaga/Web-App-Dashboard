@@ -2,14 +2,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px;
     background-color: #4D4C72;
 
     &__links {
         width: 20px;
-        height: 20px;    
-        margin-left: 12px;
-        margin-right: 12px;
+        height: 20px;
+    }
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    li {
+        padding: 12px;
+        
+        &:hover {
+            border-bottom: 2px outset greenyellow;
+            border-radius: 3px;
+        } 
     }
 }
 

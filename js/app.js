@@ -2,7 +2,8 @@
 const trafficLineChart = document.getElementById('traffic-chart');
 const trafficBarChart = document.getElementById('daily-chart');
 const mobileUsersChart = document.getElementById('mobile-users-chart');
-let alertBanner = document.getElementById('alert');
+const alertBanner = document.getElementById('alert');
+const notifications = document.getElementById('notifications');
 
 //------------create the HTML for the banner---------------//
 alertBanner.innerHTML = 
@@ -20,6 +21,12 @@ alertBanner.addEventListener('click', e => {
         alertBanner.style.display = "none"
     }
 });
+
+//------------NOTIFICATIONS---------------//
+// notifications.addEventListener('click',  e => {
+
+// });
+
 
 //--------------- LINE CHART ---------------//
 //------------------------------------------//

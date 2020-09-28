@@ -25,8 +25,23 @@
 
                     <span class="badge"></span>
 
-                    <div>
-                        <!-- notifications -->
+                    <div class="notifications">
+                        <ul class="notifications__list">
+                            <li>
+                                <p class="text">You have 6 unread messages</p>
+                                <p class="notification-close">X</p>
+                            </li>
+
+                            <li>
+                                <p class="text">You have 3 new followers</p>
+                                <p class="notification-close">X</p>
+                            </li>
+
+                            <li>
+                                <p class="text">Your password will expire in 6 days</p>
+                                <p class="notification-close">X</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <img class="profile-img" src="images/me.jpg" alt="Julia's Image">
@@ -35,21 +50,31 @@
         </header>
 
         <nav class="nav">
-            <a class="nav__links" href="#dashboard">
-                <img class="nav__icons" src="icons/icon-dashboard.svg" alt="Dashboard Icon">
-            </a>
+            <ul class="nav-list">
+                <li>
+                    <a class="nav__links" href="#dashboard">
+                        <img class="nav__icons" src="icons/icon-dashboard.svg" alt="Dashboard Icon">
+                    </a>
+                </li>
 
-            <a class="nav__links" href="#">
-                <img class="nav__icons" src="icons/icon-members.svg" alt="Members Icon">
-            </a>
+                <li>
+                    <a class="nav__links" href="#">
+                        <img class="nav__icons" src="icons/icon-members.svg" alt="Members Icon">
+                    </a>
+                </li>
 
-            <a class="nav__links" href="#">
-                <img class="nav__icons" src="icons/icon-visits.svg" alt="Visits Icon">
-            </a>
+                <li>
+                    <a class="nav__links" href="#">
+                        <img class="nav__icons" src="icons/icon-visits.svg" alt="Visits Icon">
+                    </a>
+                </li>
 
-            <a class="nav__links" href="#">
-                <img class="nav__icons" src="icons/icon-settings.svg" alt="Settings Icon">
-            </a>
+                <li>
+                    <a class="nav__links" href="#">
+                        <img class="nav__icons" src="icons/icon-settings.svg" alt="Settings Icon">
+                    </a>
+                </li>
+            </ul>
         </nav>
 
         <main class="main-container">
