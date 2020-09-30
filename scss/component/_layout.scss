@@ -1,22 +1,18 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    padding: 8px;
+    @include flexy (flex, space-between, center);
+    @include size ($h: 50px);
+    padding: 12px;
     color: $color-white;
     background-color: $color-primary;
    
     &__profile {
-        display: flex;
-        align-items: center;
+        @include flexy ($align: center);
     }
 }
 
 .main-header {
-    display: flex;
+    @include flexy (flex, space-between);
     align-content: center;
-    justify-content: space-between;
 }
 
 .traffic,
@@ -26,23 +22,18 @@
 .members,
 .message,
 .settings {
-    padding: 12px 8px 12px 8px;
+    padding: 12px;
     border-bottom: 1px solid $color-silver;
 }
 
 .traffic-header {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    @include flexy  (flex, space-between);
+    @include paddings ($top: 12px, $bottom: 12px);
 }
 
 .social-card {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 200px;
-    height: 70px;
+    @include flexy (flex, flex-start, center);
+    @include size (200px, 70px);
     padding: 12px;
     margin: auto;
     margin-bottom: 12px;
@@ -52,30 +43,26 @@
 }
 
 .social-stats {
-    display: flex;
-    flex-direction: column;
+    @include flexy ($direction: column);
 }
 
 .members-container {
-    display: grid;
-    grid-template-columns: 40px auto 50px;
+    @include fontStyle (.7em);
+    @include grids (grid, 40px auto 50px, center);
+    @include paddings ($top: 12px, $bottom: 12px);
     align-content: center;
-    align-items: center;
-    padding: 8px 0;
-    font-size: .7em;
     color: $color-gray;
 
     .time {
-        margin: 0;
+        @extend %marginZero;
     }
 }
 
 .widget-container {
-    display: flex;
-    flex-direction: column;
+    @include flexy ($direction: column);
     
     &-full,
     &-half {
-        width: 100%;
+        @include size (100%);
     }
 }

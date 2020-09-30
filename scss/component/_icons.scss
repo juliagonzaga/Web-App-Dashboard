@@ -1,22 +1,12 @@
 .nav__icons {
-    width: 20px;
-    height: 20px;
-}
-
-.search__icon {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 8px;
-    height: 8px;
+    @include size (20px, 20px);
 }
 
 .right-arrow {
-    margin: 0;
+    @extend %marginZero;
     text-align: right;
 
     img {
-        width: 12px;
-        height: 12px;
+        @include size (12px, 12px);
     }
 }

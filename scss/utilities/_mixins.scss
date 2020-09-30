@@ -1,0 +1,54 @@
+@mixin fontStyle (
+    $size: null,
+    $weight: null,
+    $height: null) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin flexy (
+    $display: flex,
+    $justify:null,
+    $align: null,
+    $direction: null,
+    $wrap: null) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin grids (
+    $display: grid,
+    $template: null,
+    $align: null,
+    $gap: null) {
+    display: $display;
+    grid-template-columns: $template;
+    align-items: $align;
+    grid-column-gap: $gap;
+}
+
+%marginZero {
+    margin: 0;
+}
+
+@mixin paddings (
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left; 
+}
+
+@mixin size (
+    $w: null,
+    $h: null) {
+    width: $w;
+    height: $h;
+}

@@ -1,36 +1,31 @@
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexy (flex, center, center);
     background-color: $color-secondary;
 
     &__links {
-        width: 20px;
-        height: 20px;
+        @include size (20px, 20px);
     }
 }
 
 .nav-list {
+    @extend %marginZero;
+    @include flexy;
     list-style-type: none;
-    margin: 0;
     padding: 0;
-    display: flex;
 
     li {
         padding: 12px;
         
         &:hover {
-            border-bottom: 2px outset greenyellow;
-            border-radius: 3px;
+            border-bottom: 3px solid greenyellow;
         } 
     }
 }
 
 .traffic-nav {
-    margin: 0;
-    display: flex;
-    font-size: .5em;
-    font-weight: 600;
+    @include fontStyle (.5em, 600);
+    @extend %marginZero;
+    @include flexy;
     color: $color-gray;
     list-style: none;
 

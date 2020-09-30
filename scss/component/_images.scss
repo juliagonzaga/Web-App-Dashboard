@@ -1,13 +1,11 @@
 .profile-img {
-    width: 25px;
-    height: 25px;
+    @include size (25px, 25px);
     border-radius: 50%;
 }
 
 .members-image {
-    height: 30px;
-    width: 30px;
-    margin: 0;
+    @extend %marginZero;
+    @include size (30px, 30px);
     border-radius: 50%;
     margin-right: 8px;
 }
@@ -15,10 +13,9 @@
 .google,
 .twitter,
 .facebook {
-    width: 40px;
-    height: auto;
+    @include size (40px, auto);
 }
 
 .social-image {
-    padding-right: 16px;
+    @include paddings ($right: 16px);
 }

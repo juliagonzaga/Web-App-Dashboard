@@ -7,7 +7,7 @@ body {
 }
 
 ::placeholder {
-    color: silver;
+    color: $color-silver;
 }
 
 input::-webkit-search-decoration,
@@ -18,8 +18,8 @@ input::-webkit-search-results-decoration {
 }
 
 hr {
-    margin: 0;
-    height: 1px;
+    @extend %marginZero;
+    @include size ($h: 1px);
     background-color: #dcdcdc;
     border: none;
 }
