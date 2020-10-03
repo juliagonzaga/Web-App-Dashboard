@@ -12,28 +12,6 @@ button {
     @include grids ($template: 1fr 1fr, $gap: 12px);
 }
 
-//====================SWITCH-LIGHT======================//
-.switch-light {
-    @include grids ($template: 1fr 1fr, $align: center);
-    @include fontStyle (.7em);
-}
-
-.switch-ios.switch-light > span {
-    @include size ($w: 70px);
-}
-
-.switch-ios.switch-light input:checked ~ span {
-    box-shadow: inset 0 0 0 30px $color-primary;
-
-    a {
-        border-color: $color-primary;
-    }
-}
-
-.switch-ios.switch-light a {
-    border: 0.25em solid #7477bf;
-}
-
 //====================NOTIFICATIONS======================//
 .bell {
     @include paddings (4px, 6px);
@@ -88,10 +66,10 @@ button {
 
 //====================ALERT======================//
 .alert {
-    padding: 12px 8px 0 8px;
+    padding: 20px 16px 0 16px;
 
     &-banner {
-        @include fontStyle (.5em);
+        @include fontStyle (.7em);
         @include flexy (flex, space-between);
         padding: 8px;
         border-radius: 3px;
@@ -106,4 +84,26 @@ button {
             cursor: pointer;
         }
     }
+}
+
+//====================SWITCH-LIGHT======================//
+.switch-light {
+    @include grids ($template: 1fr 1fr, $align: center);
+    @include fontStyle (.7em);
+}
+
+.switch-ios.switch-light > span {
+    @include size ($w: 70px);
+}
+
+.switch-ios.switch-light input:checked ~ span {
+    box-shadow: inset 0 0 0 30px $color-primary;
+
+    a {
+        border-color: $color-primary;
+    }
+}
+
+.switch-ios.switch-light a {
+    border: 0.25em solid #7477bf;
 }

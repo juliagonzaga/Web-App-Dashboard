@@ -1,6 +1,6 @@
 .header {
     @include flexy (flex, space-between, center);
-    @include size ($h: 50px);
+    @include size ($h: 60px);
     padding: 12px;
     color: $color-white;
     background-color: $color-primary;
@@ -12,23 +12,17 @@
 
 .main-header {
     @include flexy (flex, space-between);
-    align-content: center;
-}
-
-.traffic,
-.daily,
-.mobile-users,
-.social-container,
-.members,
-.message,
-.settings {
-    padding: 12px;
-    border-bottom: 1px solid $color-silver;
+    align-items: center;
 }
 
 .traffic-header {
     @include flexy  (flex, space-between);
-    @include paddings ($top: 12px, $bottom: 12px);
+    @include paddings ($bottom: 8px);
+    align-items: center;
+    
+    & > .title {
+        padding: 0;
+    }
 }
 
 .social-card {
@@ -65,4 +59,9 @@
     &-half {
         @include size (100%);
     }
+}
+
+.card {
+    padding: 20px 12px 20px 12px;
+    border-bottom: 1px solid $color-silver;
 }

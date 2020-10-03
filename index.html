@@ -3,16 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Web App Dashboard</title>
+        <title>Joy App Dashboard</title>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body class="grid-container">
         <header class="header">
             <div>
-                <h1 class="header__appName"><strong>My</strong>App&trade;</h1>
+                <h1 class="header__appName"><strong>Joy</strong>App&trade;</h1>
             </div>
 
             <div class="header__profile">
@@ -94,7 +95,7 @@
             </div>
 
             <!-- line graph charts -->
-            <section class="traffic">
+            <section class="traffic card" >
                 <div class="traffic-header">
                     <h3 class="title">Traffic</h3>
                     <ul class="traffic-nav">
@@ -106,12 +107,12 @@
                 </div>
                 <div class="widget-container-full">
                     <!-- element line graph will attach to -->
-                    <canvas id="traffic-chart" width="400" height="150"></canvas>
+                    <canvas id="traffic-chart" width="300" height="150"></canvas>
                 </div>
             </section>
 
                     <!-- bar graph -->
-            <section class="daily">
+            <section class="daily card">
                 <h3 class="title">Daily Traffic</h3>
                 <div class="widget-container-half">
                     <!-- element bar graph will attach to -->
@@ -119,7 +120,7 @@
                 </div>
             </section>
 
-            <section class="mobile-users">
+            <section class="mobile-users card">
                 <h3 class="title">Mobile Users</h3>
                 <div class="widget-container-half">
                     <!-- element bar graph will attach to -->
@@ -127,7 +128,7 @@
                 </div>
             </section>
 
-            <div class="social-container">
+            <div class="social-container card">
 
                 <h3 class="title">Social Stats</h3>
 
@@ -183,7 +184,7 @@
             </div>
 
             <!-- new members widget -->
-            <section class="members">
+            <section class="members card">
                 <h3 class="title">New Members</h3>
 
                 <div class="members-container">
@@ -224,7 +225,7 @@
             </section>
 
             <!-- recent activity widget -->
-            <section class="members">
+            <section class="members card">
                 <h3 class="title">Recent Activity</h3>
 
                 <div class="members-container">
@@ -273,7 +274,7 @@
             </section>
 
             <!-- messaging widget -->
-            <section class="message">
+            <section class="message card">
                 <h3 class="title">Message User</h3>
                 <form class="widget-container">
                     <input type="text" placeholder="Search for User" class="form-field" id="userField">
@@ -283,7 +284,7 @@
             </section>
 
             <!-- local settings widget -->
-            <section class="settings">
+            <section class="settings card">
                 <h3 class="title">Settings</h3>
 
                 <div class="switch">

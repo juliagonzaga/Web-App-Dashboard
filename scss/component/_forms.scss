@@ -30,25 +30,26 @@
 //====================SEARCH======================//
 .search {
     position: relative;
-    padding: 8px 8px 8px 64px;
+    padding: 12px;
+    padding-left: 60px;
     border-left: 1px solid $color-silver;
     border-bottom: 1px solid $color-silver;
     background-color: $color-snow;
 
     &__box {
-        @include fontStyle (.6em);
-        @include size (150px, 25px);
-        padding: 6px;
+        @include fontStyle (.7em);
+        @include size ($h: 25px);
+        padding: 8px;
         border: 1px solid $color-silver;
-        border-radius: 3px;
+        border-radius: 4px;
         outline: none;
     }
 
     &__icon {
         @include size ( 8px, 8px);
         position: absolute;
-        top: 16px;
-        right: 16px;
+        top: 20px;
+        right: 20px;
     }
 }
 

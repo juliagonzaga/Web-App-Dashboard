@@ -44,7 +44,7 @@ let lineChart = new Chart(trafficLineChart, {
             pointRadius: 3,
             pointBackgroundColor: 'rgba(255,255,255,1)',
             pointBorderColor: 'rgba(115,119,191,1)',
-            pointBorderWidth: 2,
+            pointBorderWidth: 1,
             borderWidth: 1
         }]
     },
@@ -59,15 +59,15 @@ let lineChart = new Chart(trafficLineChart, {
                     stepSize: 500,
                     beginAtZero: true,
                     minor: {
-                        fontSize: 8
+                        fontSize: 10
                     }
                 }
             }],
             xAxes: [{
-                labels: ['wk 1', 'wk 2', 'wk 3', 'wk 4', 'wk 5', 'wk 6', 'wk 7', 'wk 8', 'wk 9', 'wk 10', 'wk 11', 'wk 12'],
+                labels: ['wk 1', 'wk 2', 'wk 3', 'wk 4', 'wk 5', 'wk 6', 'wk 7', 'wk 8'],
                 ticks: {
                     minor: {
-                        fontSize: 8
+                        fontSize: 10
                     }
                 }
             }]
