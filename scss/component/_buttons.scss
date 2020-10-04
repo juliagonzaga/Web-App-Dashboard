@@ -33,12 +33,14 @@ button {
 .notifications {
     @include fontStyle (.6em);
     position: absolute;
-    left: -30px;
+    left: -22px;
     z-index: 1;
     min-width: 200px;
     padding: 8px;
-    border: 1px solid $color-white;
-    background-color: $color-primary;
+    color: $color-gray;
+    background-color: $color-white;
+    border-radius: 4px;
+    box-shadow:0 8px 12px 4px rgba($color-gray,.3);
     display: none;
 
     &__list {
@@ -52,7 +54,7 @@ button {
             justify-items: start;
 
             &::before {
-                @include fontStyle (3.5em);
+                @include fontStyle (2em);
                 content: '\2022';
                 color: $color-accent;
             }
@@ -66,10 +68,10 @@ button {
 
 //====================ALERT======================//
 .alert {
-    padding: 20px 16px 0 16px;
+    padding: 20px 12px 0 12px;
 
     &-banner {
-        @include fontStyle (.7em);
+        @include fontStyle (.8em);
         @include flexy (flex, space-between);
         padding: 8px;
         border-radius: 3px;

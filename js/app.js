@@ -12,7 +12,7 @@ alertBanner.innerHTML =
     `
     <div class="alert-banner">
         <p><strong>Alert</strong> You have <strong>6</strong> overdue tasks to complete.</p>
-        <p class="alert-banner-close">x</p>
+        <p class="alert-banner-close">X</p>
     </div>
     `
     
@@ -27,7 +27,12 @@ alertBanner.addEventListener('click', e => {
 //------------NOTIFICATIONS---------------//
 bell.addEventListener('click', e => {
     badge.style.display = 'none';
-    notifications.style.display = '';
+    notifications.style.display = 'block';
+
+    if (e.target.classList.contains('notification-close')) {
+        const list = e.target.parentElement;
+        list.style.display = 'none';
+    }
 });
 
 

@@ -1,13 +1,17 @@
 .header__appName {
     @extend %marginZero;
-    @include fontStyle (1.5em, 500);
+    @include fontStyle (1.5em, 300);
     font-family: 'Raleway', sans-serif;
+
+    > span {
+        @include fontStyle ($weight: 700);
+    }
 }
 
 .profile-name {
     @extend %marginZero;
     @include paddings ($left: 6px);
-    @include fontStyle (.8em, 400);
+    @include fontStyle (.8em, 500);
 }
 
 .main-header__title {
@@ -21,7 +25,7 @@
 .title {
     @extend %marginZero;
     @include paddings ($bottom: 16px);
-    @include fontStyle (.8em, 600);
+    @include fontStyle (.9em, 600);
     color: $color-gray;
     text-transform: uppercase;
 }
