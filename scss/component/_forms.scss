@@ -1,5 +1,5 @@
 .form-field {
-    @include fontStyle (.8em);
+    @include fontStyle (.9em);
     @include size ($h: 36px);
     @include paddings ($left: 12px, $right: 12px);
     // padding-left: 12px;
@@ -10,7 +10,7 @@
 }
 
 .form-area{
-    @include fontStyle (.8em);
+    @include fontStyle (.9em);
     @include size ($h: 120px);
     margin: 16px 0;
     padding: 12px;
@@ -41,7 +41,7 @@
 
     &__box {
         @include fontStyle (.8em);
-        @include size (80%, 28px);
+        @include size (85%, 28px);
         padding: 8px;
         border: 1px solid $color-silver;
         border-radius: 4px;

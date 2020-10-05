@@ -1,6 +1,6 @@
 button {
-    @include fontStyle (.7em, 600);
-    @include size ($h: 35px);
+    @include fontStyle (.8em, 600);
+    @include size ($h: 36px);
     border: none;
     border-radius: 4px;
     color: $color-white;
