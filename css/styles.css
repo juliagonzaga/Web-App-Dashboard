@@ -1273,8 +1273,8 @@ button {
 .search {
   display: flex;
   justify-content: flex-end;
-  position: relative;
   width: 100%;
+  position: relative;
   padding: 12px;
   padding-left: 16px;
   border-left: 1px solid silver;
