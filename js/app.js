@@ -26,11 +26,14 @@ alertBanner.addEventListener('click', e => {
 
 //------------NOTIFICATIONS---------------//
 bell.addEventListener('click', e => {
+    let element = e.target;
+    console.log(element);
     badge.style.display = 'none';
     notifications.style.display = 'block';
+    bell.classList.add('active');
 
-    if (e.target.classList.contains('notification-close')) {
-        const list = e.target.parentElement;
+    if (element.classList.contains('notification-close')) {
+        const list = element.parentElement;
         list.style.display = 'none';
     }
 });
@@ -46,10 +49,10 @@ let lineChart = new Chart(trafficLineChart, {
             data: [0, 750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
             backgroundColor: 'rgba(115,119,191,0.2)',
             borderColor: 'rgba(115,119,191,0.7)',
-            pointRadius: 3,
+            pointRadius: 4,
             pointBackgroundColor: 'rgba(255,255,255,1)',
             pointBorderColor: 'rgba(115,119,191,1)',
-            pointBorderWidth: 1,
+            pointBorderWidth: 2,
             borderWidth: 1
         }]
     },

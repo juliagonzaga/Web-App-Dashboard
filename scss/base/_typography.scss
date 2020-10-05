@@ -1,7 +1,6 @@
 .header__appName {
     @extend %marginZero;
-    @include fontStyle (1.5em, 300);
-    font-family: 'Raleway', sans-serif;
+    @include fontStyle (1.5em, 300, $family: $raleway);
 
     > span {
         @include fontStyle ($weight: 700);
@@ -25,26 +24,30 @@
 .title {
     @extend %marginZero;
     @include paddings ($bottom: 16px);
-    @include fontStyle (.9em, 600);
+    @include fontStyle (.8em, 600);
     color: $color-gray;
     text-transform: uppercase;
 }
 
 .stats-name {
     @extend %marginZero;
-    @include fontStyle (.7em, 700);
+    @include fontStyle (.9em, 700);
     color: $color-primary;
     text-transform: inherit;
 }
 
 .stats-num {
     @extend %marginZero;
-    font: 300 1.8em/1em 'Open Sans', sans-serif;
+    font: 300 1.8em/1em $opensans;
     color: $color-gray;
 }
 
 .members-info {
-    @include fontStyle (.9em, 600);
+    @include fontStyle (1.1em, 600);
+
+    .time {
+        @include fontStyle ($size: .9em, $weight: 500, $family: $opensans);
+    }
 
     > p {
         @extend %marginZero;

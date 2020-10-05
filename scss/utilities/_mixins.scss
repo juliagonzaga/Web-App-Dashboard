@@ -1,10 +1,12 @@
 @mixin fontStyle (
     $size: null,
     $weight: null,
-    $height: null) {
+    $height: null,
+    $family: null) {
     font-size: $size;
     font-weight: $weight;
     line-height: $height;
+    font-family: $family;
 }
 
 @mixin flexy (
@@ -22,11 +24,12 @@
 
 @mixin grids (
     $display: grid,
-    $template: null,
+    $t-columns: null,
+    $t-rows: null,
     $align: null,
     $gap: null) {
     display: $display;
-    grid-template-columns: $template;
+    grid-template-columns: $t-columns;
     align-items: $align;
     grid-column-gap: $gap;
 }
@@ -51,4 +54,8 @@
     $h: null) {
     width: $w;
     height: $h;
+}
+
+%calcPaddings {
+    @include paddings ($bottom: calc(20px - 12px));
 }

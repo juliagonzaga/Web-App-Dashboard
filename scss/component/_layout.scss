@@ -25,6 +25,23 @@
     }
 }
 
+.card {
+    padding: 20px 12px 20px 12px;
+    border-bottom: 1px solid $color-silver;
+}
+
+.social-container {
+    @extend %calcPaddings;
+}
+
+.members {
+    @extend %calcPaddings;
+
+    .title {
+        @include paddings ($bottom: calc(16px - 12px));
+    }
+}
+
 .social-card {
     @include flexy (flex, flex-start, center);
     @include size (200px, 70px);
@@ -42,7 +59,7 @@
 
 .members-container {
     @include fontStyle (.7em);
-    @include grids (grid, 40px auto 50px, center);
+    @include grids ($t-columns: 40px auto 50px, $align: center);
     @include paddings ($top: 12px, $bottom: 12px);
     align-content: center;
     color: $color-gray;
@@ -59,9 +76,4 @@
     &-half {
         @include size (100%);
     }
-}
-
-.card {
-    padding: 20px 12px 20px 12px;
-    border-bottom: 1px solid $color-silver;
 }

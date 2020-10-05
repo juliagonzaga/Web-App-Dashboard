@@ -9,7 +9,7 @@ button {
 }
 
 .settings-button {
-    @include grids ($template: 1fr 1fr, $gap: 12px);
+    @include grids ($t-columns: repeat(2, 1fr), $gap: 12px);
 }
 
 //====================NOTIFICATIONS======================//
@@ -32,15 +32,15 @@ button {
 
 .notifications {
     @include fontStyle (.6em);
+    @include paddings ($left: 12px, $right: 12px);
     position: absolute;
     left: -22px;
     z-index: 1;
     min-width: 200px;
-    padding: 8px;
     color: $color-gray;
     background-color: $color-white;
     border-radius: 4px;
-    box-shadow:0 8px 12px 4px rgba($color-gray,.3);
+    box-shadow: 0 8px 12px 4px rgba($color-gray, .4);
     display: none;
 
     &__list {
@@ -50,13 +50,20 @@ button {
         list-style-type: circle;
         
         li {
-            @include grids (grid, .5fr 3fr 1fr, center);
+            @include grids ($t-columns: .5fr 3fr .5fr, $align: center);
             justify-items: start;
 
             &::before {
                 @include fontStyle (2em);
                 content: '\2022';
                 color: $color-accent;
+            }
+
+            > p {
+                @include paddings ($top: 12px, $bottom: 12px);
+                @include fontStyle (10px);
+                margin: 0;
+
             }
         }
     }
@@ -90,7 +97,7 @@ button {
 
 //====================SWITCH-LIGHT======================//
 .switch-light {
-    @include grids ($template: 1fr 1fr, $align: center);
+    @include grids ($t-columns: repeat(2, 1fr), $align: center);
     @include fontStyle (.7em);
 }
 
