@@ -31,14 +31,14 @@
 .search {
     position: relative;
     padding: 12px;
-    padding-left: 60px;
+    padding-left: 16px;
     border-left: 1px solid $color-silver;
     border-bottom: 1px solid $color-silver;
     background-color: $color-snow;
 
     &__box {
-        @include fontStyle (.7em);
-        @include size ($h: 25px);
+        @include fontStyle (.8em);
+        @include size (180px, 28px);
         padding: 8px;
         border: 1px solid $color-silver;
         border-radius: 4px;
@@ -46,10 +46,10 @@
     }
 
     &__icon {
-        @include size ( 8px, 8px);
+        @include size ( 12px, 12px);
         position: absolute;
         top: 20px;
-        right: 20px;
+        right: 24px;
     }
 }
 
