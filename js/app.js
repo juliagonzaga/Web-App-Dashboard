@@ -104,7 +104,7 @@ let barChart = new Chart(trafficBarChart, {
                     stepSize: 50,
                     beginAtZero: true,
                     minor: {
-                        fontSize: 8
+                        fontSize: 10
                     }
                 }
             }],
@@ -112,7 +112,7 @@ let barChart = new Chart(trafficBarChart, {
                 labels: ['S', 'M', 'T', 'W', 'T', 'F'],
                 ticks: {
                     minor: {
-                        fontSize: 8
+                        fontSize: 10
                     }
                 }
             }]

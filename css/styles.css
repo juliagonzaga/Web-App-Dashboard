@@ -1097,7 +1097,7 @@ hr {
 }
 
 .stats-name {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 700;
   color: #7477BF;
   text-transform: inherit;
@@ -1222,7 +1222,8 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  font-size: 0.7em;
+  font-size: 0.8em;
+  color: gray;
 }
 
 .switch-ios.switch-light > span {
@@ -1241,8 +1242,9 @@ button {
 }
 
 .form-field {
-  font-size: 0.7em;
+  font-size: 0.8em;
   height: 30px;
+  padding-right: 12px;
   padding-left: 12px;
   border: 1px solid silver;
   border-radius: 4px;
@@ -1251,9 +1253,9 @@ button {
 }
 
 .form-area {
-  font-size: 0.7em;
+  font-size: 0.8em;
   height: 100px;
-  margin: 12px 0;
+  margin: 16px 0;
   padding: 12px;
   border: 1px solid silver;
   border-radius: 4px;
@@ -1263,7 +1265,7 @@ button {
 
 #timezone {
   width: 100%;
-  margin: 12px 0;
+  margin: 16px 0;
   color: gray;
   background: url("../icons/down-arrow.png") no-repeat 95%/12px;
 }
@@ -1290,7 +1292,7 @@ button {
   height: 12px;
   position: absolute;
   top: 20px;
-  right: 24px;
+  right: 20px;
 }
 
 .nav__icons {

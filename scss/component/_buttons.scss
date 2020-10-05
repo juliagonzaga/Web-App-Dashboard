@@ -98,7 +98,8 @@ button {
 //====================SWITCH-LIGHT======================//
 .switch-light {
     @include grids ($t-columns: repeat(2, 1fr), $align: center);
-    @include fontStyle (.7em);
+    @include fontStyle (.8em);
+    color: $color-gray;
 }
 
 .switch-ios.switch-light > span {
