@@ -31,7 +31,7 @@ button {
 }
 
 .notifications {
-    @include fontStyle (.6em);
+    @include fontStyle (.7em);
     @include paddings ($left: 12px, $right: 12px);
     position: absolute;
     left: -22px;
@@ -50,7 +50,7 @@ button {
         list-style-type: circle;
         
         li {
-            @include grids ($t-columns: .5fr 3fr .5fr, $align: center);
+            @include grids ($t-columns: 10% 80% 10%, $align: center);
             justify-items: start;
 
             &::before {
@@ -61,7 +61,7 @@ button {
 
             > p {
                 @include paddings ($top: 12px, $bottom: 12px);
-                @include fontStyle (10px);
+                @include fontStyle (12px);
                 margin: 0;
 
             }

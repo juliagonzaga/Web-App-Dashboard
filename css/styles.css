@@ -1162,7 +1162,7 @@ button {
 }
 
 .notifications {
-  font-size: 0.6em;
+  font-size: 0.7em;
   padding-right: 12px;
   padding-left: 12px;
   position: absolute;
@@ -1182,7 +1182,7 @@ button {
 }
 .notifications__list li {
   display: grid;
-  grid-template-columns: 0.5fr 3fr 0.5fr;
+  grid-template-columns: 10% 80% 10%;
   align-items: center;
   justify-items: start;
 }
@@ -1194,7 +1194,7 @@ button {
 .notifications__list li > p {
   padding-top: 12px;
   padding-bottom: 12px;
-  font-size: 10px;
+  font-size: 12px;
   margin: 0;
 }
 
@@ -1243,7 +1243,7 @@ button {
 
 .form-field {
   font-size: 0.8em;
-  height: 30px;
+  height: 36px;
   padding-right: 12px;
   padding-left: 12px;
   border: 1px solid silver;
@@ -1254,7 +1254,7 @@ button {
 
 .form-area {
   font-size: 0.8em;
-  height: 100px;
+  height: 120px;
   margin: 16px 0;
   padding: 12px;
   border: 1px solid silver;
@@ -1271,7 +1271,10 @@ button {
 }
 
 .search {
+  display: flex;
+  justify-content: flex-end;
   position: relative;
+  width: 100%;
   padding: 12px;
   padding-left: 16px;
   border-left: 1px solid silver;
@@ -1280,7 +1283,7 @@ button {
 }
 .search__box {
   font-size: 0.8em;
-  width: 180px;
+  width: 80%;
   height: 28px;
   padding: 8px;
   border: 1px solid silver;
@@ -1348,7 +1351,6 @@ button {
 
 .main-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 

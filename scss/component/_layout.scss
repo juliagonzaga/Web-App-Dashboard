@@ -11,7 +11,7 @@
 }
 
 .main-header {
-    @include flexy (flex, space-between);
+    @include flexy;
     align-items: center;
 }
 

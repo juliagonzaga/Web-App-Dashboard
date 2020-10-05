@@ -1,6 +1,6 @@
 .form-field {
     @include fontStyle (.8em);
-    @include size ($h: 30px);
+    @include size ($h: 36px);
     @include paddings ($left: 12px, $right: 12px);
     // padding-left: 12px;
     border: 1px solid $color-silver;
@@ -11,7 +11,7 @@
 
 .form-area{
     @include fontStyle (.8em);
-    @include size ($h: 100px);
+    @include size ($h: 120px);
     margin: 16px 0;
     padding: 12px;
     border: 1px solid $color-silver;
@@ -30,7 +30,9 @@
 
 //====================SEARCH======================//
 .search {
+    @include flexy(flex, flex-end);
     position: relative;
+    width: 100%;
     padding: 12px;
     padding-left: 16px;
     border-left: 1px solid $color-silver;
@@ -39,7 +41,7 @@
 
     &__box {
         @include fontStyle (.8em);
-        @include size (180px, 28px);
+        @include size (80%, 28px);
         padding: 8px;
         border: 1px solid $color-silver;
         border-radius: 4px;
