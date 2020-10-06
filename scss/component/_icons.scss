@@ -1,5 +1,9 @@
 .nav__icons {
     @include size (24px, 24px);
+
+    @include mq {
+        @include size (20px, 20px);
+    }
 }
 
 .right-arrow {

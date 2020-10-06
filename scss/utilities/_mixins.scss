@@ -27,11 +27,14 @@
     $t-columns: null,
     $t-rows: null,
     $align: null,
-    $gap: null) {
+    $gap: null,
+    $t-areas: null) {
     display: $display;
     grid-template-columns: $t-columns;
+    grid-template-rows: $t-rows;
     align-items: $align;
     grid-column-gap: $gap;
+    grid-template-areas: $t-areas;
 }
 
 %marginZero {

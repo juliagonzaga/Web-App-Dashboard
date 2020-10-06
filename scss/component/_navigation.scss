@@ -2,6 +2,10 @@
     @include flexy (flex, center, center);
     background-color: $color-secondary;
 
+    @include mq {
+        @include flexy (flex, $align: start);
+    }
+
     &__links {
         @include size (20px, 20px);
     }
@@ -12,9 +16,17 @@
     @include flexy;
     list-style-type: none;
     padding: 0;
+    
+    @include mq {
+        @include flexy (flex, $direction: column);
+    }
 
-    li {
+    > li {
         padding: 12px 16px 12px 16px;
+        
+        @include mq {
+            @include paddings ($top: 16px, $bottom: 16px);
+        }
         
         &:hover {
             border-bottom: 3px solid greenyellow;

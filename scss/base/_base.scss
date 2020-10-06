@@ -31,3 +31,11 @@ hr {
     -webkit-appearance:none; /* Safari and Chrome */
     appearance:none;
 }
+
+.grid-container {
+    @include grids (grid, 100%, auto, $t-areas: 'header' 'nav' 'main');
+    
+    @include mq {
+        @include grids (grid, 55px 1fr, $t-areas: 'header header' 'nav main');
+    }
+}
