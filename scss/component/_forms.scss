@@ -11,7 +11,7 @@
 
 .form-area{
     @include fontStyle (.9em);
-    @include size ($h: 120px);
+    @include size ($h: 110px);
     margin: 16px 0;
     padding: 12px;
     border: 1px solid $color-silver;
@@ -46,6 +46,10 @@
         border: 1px solid $color-silver;
         border-radius: 4px;
         outline: none;
+
+        @include mq {
+            @include size (50%);
+        }
     }
 
     &__icon {

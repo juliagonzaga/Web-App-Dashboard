@@ -105,11 +105,37 @@
     }
 }
 
+
 .widget-container {
-    @include flexy ($direction: column);
-    
-    &-full,
-    &-half {
-        @include size (100%);
+    @include flexy ($direction:column);
+}
+
+.widget-container-full{
+    width: 93vw;
+
+    @include mq {
+        width: 90vw;
+    }
+}
+
+.widget-container-half{
+    width: 93vw;
+
+    @include mq {
+        width: 40vw;
+    }
+}
+
+.settings,
+.message,
+.members {
+    @include flexy($justify: space-between, $direction:column);
+}
+
+.daily,
+.members,
+.message {
+    @include mq {
+        border-right: 1px solid $color-silver;
     }
 }

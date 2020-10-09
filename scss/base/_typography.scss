@@ -43,7 +43,7 @@
 }
 
 .members-info {
-    @include fontStyle (1.1em, 600);
+    @include fontStyle (1.1em, 500);
 
     .time {
         @include fontStyle ($size: .9em, $weight: 500, $family: $opensans);

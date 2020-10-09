@@ -1124,7 +1124,7 @@ hr {
 
 .members-info {
   font-size: 1.1em;
-  font-weight: 600;
+  font-weight: 500;
 }
 .members-info .time {
   font-size: 0.9em;
@@ -1268,7 +1268,7 @@ button {
 
 .form-area {
   font-size: 0.9em;
-  height: 120px;
+  height: 110px;
   margin: 16px 0;
   padding: 12px;
   border: 1px solid silver;
@@ -1303,6 +1303,11 @@ button {
   border: 1px solid silver;
   border-radius: 4px;
   outline: none;
+}
+@media (min-width: 768px) {
+  .search__box {
+    width: 50%;
+  }
 }
 .search__icon {
   width: 12px;
@@ -1472,8 +1477,39 @@ main {
   display: flex;
   flex-direction: column;
 }
-.widget-container-full, .widget-container-half {
-  width: 100%;
+
+.widget-container-full {
+  width: 93vw;
+}
+@media (min-width: 768px) {
+  .widget-container-full {
+    width: 90vw;
+  }
+}
+
+.widget-container-half {
+  width: 93vw;
+}
+@media (min-width: 768px) {
+  .widget-container-half {
+    width: 40vw;
+  }
+}
+
+.settings,
+.message,
+.members {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .daily,
+.members,
+.message {
+    border-right: 1px solid silver;
+  }
 }
 
 .nav {
