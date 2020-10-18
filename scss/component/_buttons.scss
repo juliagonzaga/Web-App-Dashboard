@@ -75,23 +75,20 @@ button {
 
 //====================ALERT======================//
 .alert {
-    padding: 20px 12px 0 12px;
+    margin: 20px 12px 0 12px;
+    @include fontStyle (.8em);
+    @include flexy (flex, space-between);
+    padding: 8px;
+    border-radius: 3px;
+    color: $color-white;
+    background-color: $color-primary;
 
-    &-banner {
-        @include fontStyle (.8em);
-        @include flexy (flex, space-between);
-        padding: 8px;
-        border-radius: 3px;
-        color: $color-white;
-        background-color: $color-primary;
-    
-        > p {
-            @extend %marginZero;
-        }
+    > p {
+        @extend %marginZero;
+    }
 
-        &-close:hover {
-            cursor: pointer;
-        }
+    &-banner-close:hover {
+        cursor: pointer;
     }
 }
 

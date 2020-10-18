@@ -2,41 +2,49 @@
 const trafficLineChart = document.getElementById('traffic-chart');
 const trafficBarChart = document.getElementById('daily-chart');
 const mobileUsersChart = document.getElementById('mobile-users-chart');
-const alertBanner = document.getElementById('alert');
 const bell = document.getElementById('bell');
 const badge = document.getElementById('badge');
 const notifications = document.getElementById('notifications');
 
-//------------create the HTML for the banner---------------//
-alertBanner.innerHTML = 
-    `
-    <div class="alert-banner">
-        <p><strong>Alert</strong> You have <strong>6</strong> overdue tasks to complete.</p>
-        <p class="alert-banner-close">X</p>
-    </div>
-    `
-    
-alertBanner.addEventListener('click', e => {
-    const element = e.target;
+//appends HTML for alert banner
+$('.alert').html(    
+    `<p><strong>Alert</strong> You have <strong>6</strong> overdue tasks to complete.</p>
+     <p class='alert-banner-close'>X</p>`
+);
 
-    if (element.classList.contains("alert-banner-close")) {
-        alertBanner.style.display = 'none';
+//enables user to hide the alert banner
+$('.alert').on('click', 'p', function(){
+    if ($(this).hasClass('alert-banner-close')) {
+        $(this).parent().hide();
+    }
+})
+
+//toggles notification -- hide/ show
+$('.bell').on ('click', function(e){
+    e.stopPropagation();
+    $('.bell').toggleClass('active');
+    $('#badge').hide();
+
+    if ($('.bell').hasClass('active')){
+        $('.notifications').show();
+    } else {
+        $('.notifications').hide();
     }
 });
 
-//------------NOTIFICATIONS---------------//
-bell.addEventListener('click', e => {
-    let element = e.target;
-    console.log(element);
-    badge.style.display = 'none';
-    notifications.style.display = 'block';
-    bell.classList.add('active');
-
-    if (element.classList.contains('notification-close')) {
-        const list = element.parentElement;
-        list.style.display = 'none';
-    }
+$(document).click(function() {
+    $('.bell').removeClass('active');
+    $('.notifications').hide();
 });
+
+// bell.addEventListener('click', e => {
+//     let element = e.target;
+
+//     if (element.classList.contains('notification-close')) {
+//         const list = element.parentElement;
+//         list.style.display = 'none';
+//     }
+// });
 
 
 //--------------- LINE CHART ---------------//
