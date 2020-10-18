@@ -35,8 +35,14 @@ $('.bell').on ('click', function(e){
 //closes selected notification
 $('.notifications').on ('click', 'p', function(e){
     e.stopPropagation();
+
     if ($(this).hasClass('notification-close')) {
-        $(this).parent().hide();
+        $(this).parent().remove();
+    }
+
+    const $notifList = $('.notifications__list li')
+    if ($notifList.length === 0) {
+        $('.notifications').remove();
     }
 });
 
@@ -45,16 +51,6 @@ $(document).click(function() {
     $('.bell').removeClass('active');
     $('.notifications').hide();
 });
-
-// bell.addEventListener('click', e => {
-//     let element = e.target;
-
-//     if (element.classList.contains('notification-close')) {
-//         const list = element.parentElement;
-//         list.style.display = 'none';
-//     }
-// });
-
 
 //--------------- LINE CHART ---------------//
 //------------------------------------------//
