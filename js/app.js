@@ -32,6 +32,15 @@ $('.bell').on ('click', function(e){
     }
 });
 
+//closes selected notification
+$('.notifications').on ('click', 'p', function(e){
+    e.stopPropagation();
+    if ($(this).hasClass('notification-close')) {
+        $(this).parent().hide();
+    }
+});
+
+//closes notification box whenever the user clicks outside of the box
 $(document).click(function() {
     $('.bell').removeClass('active');
     $('.notifications').hide();
