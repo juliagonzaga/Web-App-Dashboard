@@ -105,6 +105,19 @@
     }
 }
 
+.settings,
+.message,
+.members {
+    @include flexy($justify: space-between, $direction:column);
+}
+
+.daily,
+.members,
+.message {
+    @include mq {
+        border-right: 1px solid $color-silver;
+    }
+}
 
 .widget-container {
     @include flexy ($direction:column);
@@ -123,19 +136,5 @@
 
     @include mq {
         width: 40vw;
-    }
-}
-
-.settings,
-.message,
-.members {
-    @include flexy($justify: space-between, $direction:column);
-}
-
-.daily,
-.members,
-.message {
-    @include mq {
-        border-right: 1px solid $color-silver;
     }
 }

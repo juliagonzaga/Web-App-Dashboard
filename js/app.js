@@ -1,11 +1,3 @@
-
-const trafficLineChart = document.getElementById('traffic-chart');
-const trafficBarChart = document.getElementById('daily-chart');
-const mobileUsersChart = document.getElementById('mobile-users-chart');
-const bell = document.getElementById('bell');
-const badge = document.getElementById('badge');
-const notifications = document.getElementById('notifications');
-
 //appends HTML for alert banner
 $('.alert').html(    
     `<p><strong>Alert</strong> You have <strong>6</strong> overdue tasks to complete.</p>
@@ -42,7 +34,7 @@ $('.notifications').on ('click', 'p', function(e){
 
     const $notifList = $('.notifications__list li')
     if ($notifList.length === 0) {
-        $('.notifications').remove();
+        $('.notifications').html(`<p>No notifications.</p>`);
     }
 });
 
@@ -52,6 +44,17 @@ $(document).click(function() {
     $('.notifications').hide();
 });
 
+$('.search__box').keydown(function(){
+    
+})
+
+const $searches = $('.search__box').val();
+console.log($searches);
+
+const trafficLineChart = document.getElementById('traffic-chart');
+const trafficBarChart = document.getElementById('daily-chart');
+const mobileUsersChart = document.getElementById('mobile-users-chart');
+
 //--------------- LINE CHART ---------------//
 //------------------------------------------//
 let lineChart = new Chart(trafficLineChart, {
@@ -59,10 +62,10 @@ let lineChart = new Chart(trafficLineChart, {
     data: {
         datasets: [{
             lineTension: 0,
-            data: [0, 750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
+            data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1750, 1250, 1850, 2250, 1500, 2500],
             backgroundColor: 'rgba(115,119,191,0.2)',
             borderColor: 'rgba(115,119,191,0.7)',
-            pointRadius: 4,
+            pointRadius: 3,
             pointBackgroundColor: 'rgba(255,255,255,1)',
             pointBorderColor: 'rgba(115,119,191,1)',
             pointBorderWidth: 2,
@@ -70,6 +73,10 @@ let lineChart = new Chart(trafficLineChart, {
         }]
     },
     options: {
+        aspectRatio: 2.5,
+        animation : {
+            duration: 0
+        },
         legend: {
             display: false
         },
@@ -85,7 +92,7 @@ let lineChart = new Chart(trafficLineChart, {
                 }
             }],
             xAxes: [{
-                labels: ['wk 1', 'wk 2', 'wk 3', 'wk 4', 'wk 5', 'wk 6', 'wk 7', 'wk 8'],
+                labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
                 ticks: {
                     minor: {
                         fontSize: 10
