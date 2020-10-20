@@ -36,6 +36,6 @@ hr {
     @include grids (grid, 100%, auto, $t-areas: 'header' 'nav' 'main');
     
     @include mq {
-        @include grids (grid, 55px 1fr, $t-areas: 'header header' 'nav main');
+        @include grids (grid, 70px 1fr, $t-areas: 'header header' 'nav main');
     }
 }

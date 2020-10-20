@@ -5,12 +5,21 @@
     > span {
         @include fontStyle ($weight: 700);
     }
+
+    @include mq {
+        @include fontStyle (1.7em);
+    }
 }
 
 .profile-name {
     @extend %marginZero;
     @include paddings ($left: 6px);
     @include fontStyle (.8em, 500);
+
+    @include mq{
+        @include paddings ($left: 8px);
+        @include fontStyle (1em);
+    }
 }
 
 .main-header__title {
@@ -19,6 +28,11 @@
     @include fontStyle (1.1em, 700);
     align-items: center;
     color: $color-gray;
+
+    @include mq {
+        @include paddings ($right: 16px, $left: 16px);
+        @include fontStyle (1.3em);
+    }
 }
 
 .title {
@@ -27,6 +41,10 @@
     @include fontStyle (.8em, 600);
     color: $color-gray;
     text-transform: uppercase;
+
+    @include mq {
+        @include fontStyle (1em);
+    }
 }
 
 .stats-name {

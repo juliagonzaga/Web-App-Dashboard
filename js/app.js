@@ -65,7 +65,7 @@ let lineChart = new Chart(trafficLineChart, {
             data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1750, 1250, 1850, 2250, 1500, 2500],
             backgroundColor: 'rgba(115,119,191,0.2)',
             borderColor: 'rgba(115,119,191,0.7)',
-            pointRadius: 3,
+            pointRadius: 4,
             pointBackgroundColor: 'rgba(255,255,255,1)',
             pointBorderColor: 'rgba(115,119,191,1)',
             pointBorderWidth: 2,
@@ -73,7 +73,7 @@ let lineChart = new Chart(trafficLineChart, {
         }]
     },
     options: {
-        aspectRatio: 2.5,
+        aspectRatio: 2,
         animation : {
             duration: 0
         },

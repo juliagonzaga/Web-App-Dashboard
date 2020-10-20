@@ -14,20 +14,16 @@ button {
 
 //====================NOTIFICATIONS======================//
 .bell {
+    @include size (25px, 25px);
     @include paddings (4px, 6px);
     position: relative;
     margin-right: 8px;
     border-right: 1px solid $color-secondary;
-}
-
-#badge {
-    @include size (8px, 8px);
-    position: absolute;
-    top: 4px;
-    left: 10px;
-    border: 1px solid $color-primary;
-    border-radius: 50%;
-    background-color: $color-accent;
+    
+    @include mq {
+        @include paddings (6px, 8px);
+        @include size (35px, 35px);
+    }
 }
 
 .notifications {
@@ -75,13 +71,19 @@ button {
 
 //====================ALERT======================//
 .alert {
-    margin: 20px 12px 0 12px;
     @include fontStyle (.8em);
     @include flexy (flex, space-between);
+    margin: 20px 12px 0 12px;
     padding: 8px;
     border-radius: 3px;
     color: $color-white;
     background-color: $color-primary;
+
+    @include mq {
+        @include fontStyle (1em);
+        margin: 20px 16px 0 16px;
+        padding: 12px;
+    }
 
     > p {
         @extend %marginZero;

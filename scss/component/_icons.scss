@@ -2,7 +2,7 @@
     @include size (24px, 24px);
 
     @include mq {
-        @include size (20px, 20px);
+        @include size (28px, 28px);
     }
 }
 
@@ -14,3 +14,27 @@
         @include size (12px, 12px);
     }
 }
+
+#badge {
+    @include size (8px, 8px);
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    border: 1px solid $color-primary;
+    border-radius: 50%;
+    background-color: $color-accent;
+    animation: zoom 1.5s infinite;
+
+    @include mq{
+        @include size (10px, 10px);
+        left: 10px;
+    }
+}
+
+@keyframes zoom {
+    0% { opacity: 0; transform: scale(0); }
+    10% { opacity: 1; transform: scale(1); }
+    50% { opacity: 1; }
+    51% { opacity: 0; }
+    100% { opacity: 0; }
+  }

@@ -1,6 +1,10 @@
 .profile-img {
     @include size (25px, 25px);
     border-radius: 50%;
+
+    @include mq {
+        @include size (30px, 30px);
+    }
 }
 
 .members-image {

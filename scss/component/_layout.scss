@@ -7,6 +7,11 @@
     &__profile {
         @include flexy ($align: center);
     }
+
+    @include mq {
+        padding: 16px;
+        height: 70px;
+    }
 }
 
 .main-container {
@@ -49,6 +54,10 @@
     @include flexy  (flex, space-between);
     @include paddings ($bottom: 8px);
     align-items: center;
+
+    @include mq {
+        @include paddings ($bottom: 12px);
+    }
     
     & > .title {
         padding: 0;
@@ -58,6 +67,10 @@
 .card {
     padding: 20px 12px 20px 12px;
     border-bottom: 1px solid $color-silver;
+
+    @include mq {
+        padding: 28px 16px 28px 16px;
+    }
 }
 
 .social {
@@ -123,18 +136,7 @@
     @include flexy ($direction:column);
 }
 
-.widget-container-full{
-    width: 93vw;
-
-    @include mq {
-        width: 90vw;
-    }
-}
-
+.widget-container-full,
 .widget-container-half{
-    width: 93vw;
-
-    @include mq {
-        width: 40vw;
-    }
+    width: 100%;
 }
