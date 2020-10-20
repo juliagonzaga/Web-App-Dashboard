@@ -6,6 +6,7 @@ button {
     color: $color-white;
     text-transform: uppercase;
     background-color: $color-primary;
+    cursor: pointer;
 }
 
 .settings-button {
@@ -19,6 +20,7 @@ button {
     position: relative;
     margin-right: 8px;
     border-right: 1px solid $color-secondary;
+    cursor: pointer;
     
     @include mq {
         @include paddings (6px, 8px);
@@ -89,7 +91,7 @@ button {
         @extend %marginZero;
     }
 
-    &-banner-close:hover {
+    &-banner-close {
         cursor: pointer;
     }
 }

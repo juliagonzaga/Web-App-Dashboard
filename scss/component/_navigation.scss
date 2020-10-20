@@ -58,9 +58,12 @@
     }
 
     &__link {
-        padding: 4px 12px 4px 12px;
+        padding: 2px 12px 2px 12px;
+        cursor: pointer;
 
-        // @include mq {
-        // }
+        @include mq {
+            padding: 4px 16px 4px 16px;
+            margin-left: 12px;
+        }
     }
 }

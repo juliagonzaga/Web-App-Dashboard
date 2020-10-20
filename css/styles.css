@@ -1171,6 +1171,7 @@ button {
   color: #fff;
   text-transform: uppercase;
   background-color: #7477BF;
+  cursor: pointer;
 }
 
 .settings-button {
@@ -1187,6 +1188,7 @@ button {
   position: relative;
   margin-right: 8px;
   border-right: 1px solid #4D4C72;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .bell {
@@ -1255,7 +1257,7 @@ button {
     padding: 12px;
   }
 }
-.alert-banner-close:hover {
+.alert-banner-close {
   cursor: pointer;
 }
 
@@ -1349,6 +1351,7 @@ button {
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .search__icon {
@@ -1473,7 +1476,7 @@ main {
 @media (min-width: 768px) {
   .header {
     padding: 16px;
-    height: 70px;
+    height: 65px;
   }
 }
 
@@ -1666,7 +1669,14 @@ main {
   border-radius: 20px;
 }
 .traffic-nav__link {
-  padding: 4px 12px 4px 12px;
+  padding: 2px 12px 2px 12px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .traffic-nav__link {
+    padding: 4px 16px 4px 16px;
+    margin-left: 12px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

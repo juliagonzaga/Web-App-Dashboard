@@ -73,7 +73,7 @@ let lineChart = new Chart(trafficLineChart, {
         }]
     },
     options: {
-        aspectRatio: 2,
+        aspectRatio: 2.5,
         animation : {
             duration: 0
         },
@@ -145,7 +145,7 @@ let barChart = new Chart(trafficBarChart, {
 let doughnutChart = new Chart(mobileUsersChart, {
     type: 'doughnut',
     data: {
-        labels: ['Phone', 'Tablet', 'Desktop'],
+        labels: ['Phones', 'Tablets', 'Desktop'],
         datasets: [{
             backgroundColor: ['#81c98f', '#74b1bf', '#7377bf'],
             data: [3000, 3000, 10000],
@@ -156,8 +156,8 @@ let doughnutChart = new Chart(mobileUsersChart, {
         legend : {
             position: 'right',
             labels: {
-                boxWidth: 12,
-                fontSize: 12,
+                boxWidth: 14,
+                fontSize: 14
             }
         },
         rotation: -0.7 * Math.PI
