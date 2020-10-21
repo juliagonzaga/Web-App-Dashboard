@@ -35,7 +35,7 @@ hr {
 .grid-container {
     @include grids (grid, 100%, auto, $t-areas: 'header' 'nav' 'main');
     
-    @include mq {
+    @include mq($tablet) {
         @include grids (grid, 70px 1fr, $t-areas: 'header header' 'nav main');
     }
 }

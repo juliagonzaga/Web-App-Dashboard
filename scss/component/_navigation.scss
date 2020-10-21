@@ -2,7 +2,7 @@
     @include flexy (flex, center, center);
     background-color: $color-secondary;
 
-    @include mq {
+    @include mq($tablet) {
         @include flexy (flex, $align: start);
     }
 
@@ -17,21 +17,21 @@
     list-style-type: none;
     padding: 0;   
 
-    @include mq {
+    @include mq($tablet) {
         @include flexy (flex, $direction: column);
     }
 
     > li {
         padding: 12px 16px 12px 16px;
         
-        @include mq {
+        @include mq($tablet) {
             padding: 20px;
         }
         
         &:hover {
             border-bottom: 3px solid greenyellow;
 
-            @include mq {
+            @include mq($tablet) {
                 border-bottom: none;
                 border-left: 3px solid greenyellow;
             }
@@ -47,8 +47,8 @@
     color: $color-gray;
     list-style: none;
 
-    @include mq {
-        @include fontStyle (.9em);
+    @include mq($tablet) {
+        @include fontStyle (1em);
     }
 
     .active {
@@ -61,7 +61,7 @@
         padding: 2px 12px 2px 12px;
         cursor: pointer;
 
-        @include mq {
+        @include mq($tablet) {
             padding: 4px 16px 4px 16px;
             margin-left: 12px;
         }

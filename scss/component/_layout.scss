@@ -8,14 +8,14 @@
         @include flexy ($align: center);
     }
 
-    @include mq {
+    @include mq($tablet) {
         padding: 16px;
         height: 65px;
     }
 }
 
 .main-container {
-    @include mq {
+    @include mq($tablet) {
         @include grids ($t-columns: 50%);
     }
 }
@@ -29,7 +29,7 @@
 .alert,
 .traffic,
 .social {
-    @include mq {
+    @include mq($tablet) {
         grid-column: 1 / span 2;
     }
 }
@@ -37,7 +37,7 @@
 .daily,
 .members,
 .message {
-    @include mq {
+    @include mq($tablet) {
         grid-column: 1 / span 1;
     }
 }
@@ -45,7 +45,7 @@
 .mobile,
 .activity,
 .settings {
-    @include mq {
+    @include mq($tablet) {
         grid-column: 2 / span 1;
     }
 }
@@ -55,8 +55,8 @@
     @include paddings ($bottom: 8px);
     align-items: center;
 
-    @include mq {
-        @include paddings ($bottom: 12px);
+    @include mq($tablet) {
+        @include paddings ($bottom: 20px);
     }
     
     & > .title {
@@ -68,7 +68,7 @@
     padding: 20px 12px 20px 12px;
     border-bottom: 1px solid $color-silver;
 
-    @include mq {
+    @include mq($tablet) {
         padding: 28px 16px 28px 16px;
     }
 }
@@ -77,7 +77,7 @@
     @extend %calcPaddings;
 
     &-container {
-        @include mq {
+        @include mq($tablet) {
             @include flexy;
         }
     }
@@ -91,6 +91,10 @@
         border: 1px solid $color-silver;
         border-radius: 4px;
         background-color: $color-snow;
+
+        @include mq($desktop) {
+            @include size (250px, 85px);
+        }
     }
     
     &-stats {
@@ -107,15 +111,10 @@
 }
 
 .members-container {
-    @include fontStyle (.7em);
     @include grids ($t-columns: 40px auto 50px, $align: center);
     @include paddings ($top: 12px, $bottom: 12px);
     align-content: center;
     color: $color-gray;
-
-    .time {
-        @extend %marginZero;
-    }
 }
 
 .settings,
@@ -127,7 +126,7 @@
 .daily,
 .members,
 .message {
-    @include mq {
+    @include mq($tablet) {
         border-right: 1px solid $color-silver;
     }
 }

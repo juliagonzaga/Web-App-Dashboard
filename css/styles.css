@@ -682,7 +682,7 @@
   }
 }
 /*# sourceMappingURL=toggle-switch.css.map */
-.traffic-nav, .nav-list, .members-container .time, .members-image, .right-arrow, .alert > p, .notifications__list, .members-info > p, .stats-num, .stats-name, .title, .main-header__title, .profile-name, .header__appName, hr {
+.traffic-nav, .nav-list, .members-image, .right-arrow, .alert > p, .notifications__list, .time, .name, .stats-num, .stats-name, .title, .main-header__title, .profile-name, .header__appName, hr {
   margin: 0;
 }
 
@@ -1129,6 +1129,7 @@ hr {
 }
 @media (min-width: 768px) {
   .title {
+    padding-bottom: 20px;
     font-size: 1em;
   }
 }
@@ -1139,27 +1140,52 @@ hr {
   color: #7477BF;
   text-transform: inherit;
 }
+@media (min-width: 1024px) {
+  .stats-name {
+    font-size: 0.9em;
+  }
+}
 
 .stats-num {
   font: 300 1.8em/1em "Open Sans", sans-serif;
   color: gray;
 }
-
-.members-info {
-  font-size: 1.1em;
-  font-weight: 500;
+@media (min-width: 1024px) {
+  .stats-num {
+    font-size: 2.1em;
+  }
 }
-.members-info .time {
-  font-size: 0.9em;
+
+.members-info > a {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #7477BF;
+}
+@media (min-width: 768px) {
+  .members-info > a {
+    font-size: 0.9em;
+  }
+}
+
+.name {
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+@media (min-width: 768px) {
+  .name {
+    font-size: 0.9em;
+  }
+}
+
+.time {
+  font-size: 0.7em;
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
 }
-.members-info > p {
-  line-height: 1.2em;
-}
-.members-info > a {
-  text-decoration: none;
-  color: #7477BF;
+@media (min-width: 768px) {
+  .time {
+    font-size: 0.8em;
+  }
 }
 
 button {
@@ -1244,16 +1270,16 @@ button {
   font-size: 0.8em;
   display: flex;
   justify-content: space-between;
-  margin: 20px 12px 0 12px;
+  margin: 16px 12px 12px 12px;
   padding: 8px;
-  border-radius: 3px;
+  border-radius: 4px;
   color: #fff;
   background-color: #7477BF;
 }
 @media (min-width: 768px) {
   .alert {
     font-size: 1em;
-    margin: 20px 16px 0 16px;
+    margin: 20px 16px 20px 16px;
     padding: 12px;
   }
 }
@@ -1392,6 +1418,12 @@ main {
   width: 12px;
   height: 12px;
 }
+@media (min-width: 768px) {
+  .right-arrow img {
+    width: 16px;
+    height: 16px;
+  }
+}
 
 #badge {
   width: 8px;
@@ -1455,6 +1487,14 @@ main {
 .facebook {
   width: 40px;
   height: auto;
+}
+@media (min-width: 1024px) {
+  .google,
+.twitter,
+.facebook {
+    width: 50px;
+    height: auto;
+  }
 }
 
 .social-image {
@@ -1525,7 +1565,7 @@ main {
 }
 @media (min-width: 768px) {
   .traffic-header {
-    padding-bottom: 12px;
+    padding-bottom: 20px;
   }
 }
 .traffic-header > .title {
@@ -1559,6 +1599,12 @@ main {
   border-radius: 4px;
   background-color: #FBFBFB;
 }
+@media (min-width: 1024px) {
+  .social-card {
+    width: 250px;
+    height: 85px;
+  }
+}
 .social-stats {
   display: flex;
   flex-direction: column;
@@ -1569,7 +1615,6 @@ main {
 }
 
 .members-container {
-  font-size: 0.7em;
   display: grid;
   grid-template-columns: 40px auto 50px;
   align-items: center;
@@ -1578,6 +1623,7 @@ main {
   align-content: center;
   color: gray;
 }
+
 .settings,
 .message,
 .members {
@@ -1660,7 +1706,7 @@ main {
 }
 @media (min-width: 768px) {
   .traffic-nav {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 }
 .traffic-nav .active {

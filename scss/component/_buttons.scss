@@ -22,7 +22,7 @@ button {
     border-right: 1px solid $color-secondary;
     cursor: pointer;
     
-    @include mq {
+    @include mq($tablet) {
         @include paddings (6px, 8px);
         @include size (35px, 35px);
     }
@@ -75,15 +75,15 @@ button {
 .alert {
     @include fontStyle (.8em);
     @include flexy (flex, space-between);
-    margin: 20px 12px 0 12px;
+    margin: 16px 12px 12px 12px;
     padding: 8px;
-    border-radius: 3px;
+    border-radius: 4px;
     color: $color-white;
     background-color: $color-primary;
 
-    @include mq {
+    @include mq($tablet) {
         @include fontStyle (1em);
-        margin: 20px 16px 0 16px;
+        margin: 20px 16px 20px 16px;
         padding: 12px;
     }
 

@@ -2,7 +2,6 @@
     @include fontStyle (.9em);
     @include size ($h: 36px);
     @include paddings ($left: 12px, $right: 12px);
-    // padding-left: 12px;
     border: 1px solid $color-silver;
     border-radius: 4px;
     outline: none;
@@ -39,7 +38,7 @@
     border-bottom: 1px solid $color-silver;
     background-color: $color-snow;
 
-    @include mq {
+    @include mq($tablet) {
         padding: 16px;
     }
 
@@ -51,7 +50,7 @@
         border-radius: 4px;
         outline: none;
 
-        @include mq {
+        @include mq($tablet) {
             @include fontStyle (1em);
             @include size (40%, 36px);
         }
@@ -64,7 +63,7 @@
         right: 20px;
         cursor: pointer;
 
-        @include mq {
+        @include mq($tablet) {
             @include size (16px, 16px);
             top: 26px;
             right: 26px;

@@ -1,7 +1,7 @@
 .nav__icons {
     @include size (24px, 24px);
 
-    @include mq {
+    @include mq($tablet) {
         @include size (28px, 28px);
     }
 }
@@ -12,6 +12,10 @@
 
     img {
         @include size (12px, 12px);
+
+        @include mq($tablet) {
+            @include size (16px, 16px);
+        }
     }
 }
 
@@ -25,7 +29,7 @@
     background-color: $color-accent;
     animation: zoom 1.5s infinite;
 
-    @include mq{
+    @include mq($tablet) {
         @include size (10px, 10px);
         left: 10px;
     }

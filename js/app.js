@@ -87,7 +87,7 @@ let lineChart = new Chart(trafficLineChart, {
                     stepSize: 500,
                     beginAtZero: true,
                     minor: {
-                        fontSize: 10
+                        fontSize: 11
                     }
                 }
             }],
@@ -95,7 +95,7 @@ let lineChart = new Chart(trafficLineChart, {
                 labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
                 ticks: {
                     minor: {
-                        fontSize: 10
+                        fontSize: 11
                     }
                 }
             }]
@@ -124,7 +124,7 @@ let barChart = new Chart(trafficBarChart, {
                     stepSize: 50,
                     beginAtZero: true,
                     minor: {
-                        fontSize: 10
+                        fontSize: 11
                     }
                 }
             }],
@@ -132,7 +132,7 @@ let barChart = new Chart(trafficBarChart, {
                 labels: ['S', 'M', 'T', 'W', 'T', 'F'],
                 ticks: {
                     minor: {
-                        fontSize: 10
+                        fontSize: 11
                     }
                 }
             }]

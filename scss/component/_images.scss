@@ -2,7 +2,7 @@
     @include size (25px, 25px);
     border-radius: 50%;
 
-    @include mq {
+    @include mq($tablet) {
         @include size (30px, 30px);
     }
 }
@@ -18,6 +18,10 @@
 .twitter,
 .facebook {
     @include size (40px, auto);
+    
+    @include mq($desktop) {
+        @include size (50px, auto);
+    }
 }
 
 .social-image {

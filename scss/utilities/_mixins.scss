@@ -63,8 +63,8 @@
     @include paddings ($bottom: calc(20px - 12px));
 }
 
-@mixin mq {
-    @media (min-width: 768px){
-        @content;
+@mixin mq($width) {
+    @media (min-width: $width) {
+      @content;
     }
 }

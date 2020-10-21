@@ -6,7 +6,7 @@
         @include fontStyle ($weight: 700);
     }
 
-    @include mq {
+    @include mq($tablet) {
         @include fontStyle (1.7em);
     }
 }
@@ -16,7 +16,7 @@
     @include paddings ($left: 6px);
     @include fontStyle (.8em, 500);
 
-    @include mq{
+    @include mq($tablet) {
         @include paddings ($left: 8px);
         @include fontStyle (1em);
     }
@@ -29,7 +29,7 @@
     align-items: center;
     color: $color-gray;
 
-    @include mq {
+    @include mq($tablet) {
         @include paddings ($right: 16px, $left: 16px);
         @include fontStyle (1.3em);
     }
@@ -42,7 +42,8 @@
     color: $color-gray;
     text-transform: uppercase;
 
-    @include mq {
+    @include mq($tablet) {
+        @include paddings ($bottom: 20px);
         @include fontStyle (1em);
     }
 }
@@ -52,28 +53,46 @@
     @include fontStyle (.8em, 700);
     color: $color-primary;
     text-transform: inherit;
+
+    @include mq($desktop) {
+        @include fontStyle (.9em);
+    }
 }
 
 .stats-num {
     @extend %marginZero;
     font: 300 1.8em/1em $opensans;
     color: $color-gray;
+
+    @include mq($desktop) {
+        @include fontStyle (2.1em);
+    }
 }
 
-.members-info {
-    @include fontStyle (1.1em, 500);
+.members-info > a {
+    @include fontStyle (.8em);
+    text-decoration: none;
+    color: $color-primary;
 
-    .time {
-        @include fontStyle ($size: .9em, $weight: 500, $family: $opensans);
+    @include mq($tablet) {
+        @include fontStyle (.9em);
     }
+}
 
-    > p {
-        @extend %marginZero;
-        @include fontStyle ($height: 1.2em);
+.name {
+    @extend %marginZero;
+    @include fontStyle ($size: .8em, $height: 1.2em);
+
+    @include mq($tablet) {
+        @include fontStyle (.9em);
     }
+}
 
-    > a {
-        text-decoration: none;
-        color: $color-primary;
+.time {
+    @extend %marginZero;
+    @include fontStyle ($size: .7em, $weight: 500, $family: $opensans);
+
+    @include mq($tablet) {
+        @include fontStyle (.8em);
     }
 }
