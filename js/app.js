@@ -54,12 +54,18 @@ $('.traffic-nav').on('click', 'li', function(){
 
     $(this).addClass('active');
     const $time = $('.active').text();
-    
+
     if ($time === 'Hourly') {
         updateChart(hourData, hourLabel, hourMax, hourStep);
     } 
+    else if ($time === 'Daily') {
+        updateChart(dailyData, dailyLabel, dailyMax, dailyStep);
+    }
     else if ($time === 'Weekly') {
         updateChart(weekData, weekLabel, weekMax, weekStep);
+    }
+    else if ($time === 'Monthly') {
+        updateChart(moData, moLabel, moMax, moStep);
     }
 });
 
