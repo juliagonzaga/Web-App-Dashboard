@@ -1073,7 +1073,7 @@ hr {
 @media (min-width: 768px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 60px 1fr;
     grid-template-areas: "header header" "nav main";
   }
 }
@@ -1086,7 +1086,7 @@ hr {
 .header__appName > span {
   font-weight: 700;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header__appName {
     font-size: 1.7em;
   }
@@ -1097,7 +1097,7 @@ hr {
   font-size: 0.8em;
   font-weight: 500;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .profile-name {
     padding-left: 8px;
     font-size: 1em;
@@ -1112,7 +1112,7 @@ hr {
   align-items: center;
   color: gray;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .main-header__title {
     padding-right: 16px;
     padding-left: 16px;
@@ -1127,7 +1127,7 @@ hr {
   color: gray;
   text-transform: uppercase;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .title {
     padding-bottom: 20px;
     font-size: 1em;
@@ -1216,7 +1216,7 @@ button {
   border-right: 1px solid #4D4C72;
   cursor: pointer;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .bell {
     padding-top: 6px;
     padding-right: 8px;
@@ -1278,7 +1278,13 @@ button {
 }
 @media (min-width: 768px) {
   .alert {
-    font-size: 1em;
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 1024px) {
+  .alert {
+    font-size: 0.9em;
+    font-weight: 400;
     margin: 20px 16px 20px 16px;
     padding: 12px;
   }
@@ -1350,7 +1356,7 @@ button {
   border-bottom: 1px solid silver;
   background-color: #FBFBFB;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .search {
     padding: 16px;
   }
@@ -1366,6 +1372,12 @@ button {
 }
 @media (min-width: 768px) {
   .search__box {
+    width: 40%;
+    height: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  .search__box {
     font-size: 1em;
     width: 40%;
     height: 36px;
@@ -1379,7 +1391,7 @@ button {
   right: 20px;
   cursor: pointer;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .search__icon {
     width: 16px;
     height: 16px;
@@ -1404,7 +1416,7 @@ main {
   width: 24px;
   height: 24px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav__icons {
     width: 28px;
     height: 28px;
@@ -1436,7 +1448,7 @@ main {
   background-color: #81c98f;
   animation: zoom 1.5s infinite;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   #badge {
     width: 10px;
     height: 10px;
@@ -1468,7 +1480,7 @@ main {
   height: 25px;
   border-radius: 50%;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .profile-img {
     width: 30px;
     height: 30px;
@@ -1513,7 +1525,7 @@ main {
   display: flex;
   align-items: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header {
     padding: 16px;
     height: 65px;
@@ -1697,7 +1709,7 @@ main {
 }
 
 .traffic-nav {
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-weight: 500;
   display: flex;
   padding: 0;
@@ -1705,6 +1717,11 @@ main {
   list-style: none;
 }
 @media (min-width: 768px) {
+  .traffic-nav {
+    font-size: 0.8em;
+  }
+}
+@media (min-width: 1024px) {
   .traffic-nav {
     font-size: 1em;
   }
@@ -1715,7 +1732,7 @@ main {
   border-radius: 20px;
 }
 .traffic-nav__link {
-  padding: 2px 12px 2px 12px;
+  padding: 2px 8px 2px 8px;
   cursor: pointer;
 }
 @media (min-width: 768px) {

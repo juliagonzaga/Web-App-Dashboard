@@ -8,7 +8,7 @@
         @include flexy ($align: center);
     }
 
-    @include mq($tablet) {
+    @include mq($desktop) {
         padding: 16px;
         height: 65px;
     }

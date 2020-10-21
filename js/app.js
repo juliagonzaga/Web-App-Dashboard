@@ -44,25 +44,33 @@ $(document).click(function() {
     $('.notifications').hide();
 });
 
-$('.search__box').keydown(function(){
+
+//adds an 'active'class for the clicked nav link
+$('.traffic-nav').on('click', 'li', function(){
+
+    $('.traffic-nav__link').each(function(){
+        $(this).removeClass('active');
+    });
+
+    $(this).addClass('active');
+    const $time = $('.active').text();
     
-})
-
-const $searches = $('.search__box').val();
-console.log($searches);
-
-const trafficLineChart = document.getElementById('traffic-chart');
-const trafficBarChart = document.getElementById('daily-chart');
-const mobileUsersChart = document.getElementById('mobile-users-chart');
+    if ($time === 'Hourly') {
+        updateChart(hourData, hourLabel, hourMax, hourStep);
+    } 
+    else if ($time === 'Weekly') {
+        updateChart(weekData, weekLabel, weekMax, weekStep);
+    }
+});
 
 //--------------- LINE CHART ---------------//
 //------------------------------------------//
-let lineChart = new Chart(trafficLineChart, {
+let lineChart = new Chart($('#traffic-chart'), {
     type: 'line',
     data: {
         datasets: [{
             lineTension: 0,
-            data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1750, 1250, 1850, 2250, 1500, 2500],
+            data: weekData,
             backgroundColor: 'rgba(115,119,191,0.2)',
             borderColor: 'rgba(115,119,191,0.7)',
             pointRadius: 4,
@@ -83,8 +91,8 @@ let lineChart = new Chart(trafficLineChart, {
         scales: {
             yAxes: [{
                 ticks: {
-                    max: 2500,
-                    stepSize: 500,
+                    max: weekMax,
+                    stepSize: weekStep,
                     beginAtZero: true,
                     minor: {
                         fontSize: 11
@@ -92,7 +100,7 @@ let lineChart = new Chart(trafficLineChart, {
                 }
             }],
             xAxes: [{
-                labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+                labels: weekLabel,
                 ticks: {
                     minor: {
                         fontSize: 11
@@ -105,7 +113,7 @@ let lineChart = new Chart(trafficLineChart, {
 
 //--------------- BAR CHART ---------------//
 //------------------------------------------//
-let barChart = new Chart(trafficBarChart, {
+let barChart = new Chart($('#daily-chart'), {
     type: 'bar',
     data: {
         datasets: [{
@@ -142,7 +150,7 @@ let barChart = new Chart(trafficBarChart, {
 
 //--------------- DOUGHNUT CHART ---------------//
 //------------------------------------------//
-let doughnutChart = new Chart(mobileUsersChart, {
+let doughnutChart = new Chart($('#mobile-users-chart'), {
     type: 'doughnut',
     data: {
         labels: ['Phones', 'Tablets', 'Desktop'],

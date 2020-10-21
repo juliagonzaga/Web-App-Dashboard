@@ -6,7 +6,7 @@
         @include fontStyle ($weight: 700);
     }
 
-    @include mq($tablet) {
+    @include mq($desktop) {
         @include fontStyle (1.7em);
     }
 }
@@ -16,7 +16,7 @@
     @include paddings ($left: 6px);
     @include fontStyle (.8em, 500);
 
-    @include mq($tablet) {
+    @include mq($desktop) {
         @include paddings ($left: 8px);
         @include fontStyle (1em);
     }
@@ -29,7 +29,7 @@
     align-items: center;
     color: $color-gray;
 
-    @include mq($tablet) {
+    @include mq($desktop) {
         @include paddings ($right: 16px, $left: 16px);
         @include fontStyle (1.3em);
     }
@@ -42,7 +42,7 @@
     color: $color-gray;
     text-transform: uppercase;
 
-    @include mq($tablet) {
+    @include mq($desktop) {
         @include paddings ($bottom: 20px);
         @include fontStyle (1em);
     }

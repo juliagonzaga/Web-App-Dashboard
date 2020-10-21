@@ -40,7 +40,7 @@
 }
 
 .traffic-nav {
-    @include fontStyle (.7em, 500);
+    @include fontStyle (.6em, 500);
     @extend %marginZero;
     @include flexy;
     padding: 0;
@@ -48,6 +48,10 @@
     list-style: none;
 
     @include mq($tablet) {
+        @include fontStyle (.8em);
+    }
+
+    @include mq($desktop) {
         @include fontStyle (1em);
     }
 
@@ -58,7 +62,7 @@
     }
 
     &__link {
-        padding: 2px 12px 2px 12px;
+        padding: 2px 8px 2px 8px;
         cursor: pointer;
 
         @include mq($tablet) {

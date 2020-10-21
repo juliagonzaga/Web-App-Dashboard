@@ -2,7 +2,7 @@
     @include size (25px, 25px);
     border-radius: 50%;
 
-    @include mq($tablet) {
+    @include mq($desktop) {
         @include size (30px, 30px);
     }
 }

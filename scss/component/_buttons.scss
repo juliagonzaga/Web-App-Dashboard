@@ -22,7 +22,7 @@ button {
     border-right: 1px solid $color-secondary;
     cursor: pointer;
     
-    @include mq($tablet) {
+    @include mq($desktop) {
         @include paddings (6px, 8px);
         @include size (35px, 35px);
     }
@@ -82,7 +82,11 @@ button {
     background-color: $color-primary;
 
     @include mq($tablet) {
-        @include fontStyle (1em);
+        @include fontStyle (.9em);
+    }
+
+    @include mq($desktop) {
+        @include fontStyle (.9em, 400);
         margin: 20px 16px 20px 16px;
         padding: 12px;
     }
