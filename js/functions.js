@@ -25,3 +25,14 @@ function updateChart(time, label, max, step) {
     lineChart.options.scales.yAxes[0].ticks.stepSize = step;
     lineChart.update();
 };
+
+const alertOnLoad = '<span><strong>Alert</strong></span> <p>You have <strong>6</strong> overdue tasks to complete.</p>';
+const userError = '<p>Please fill out <strong>user</strong> and <strong>message</strong> fields before sending</p>';
+const userFieldError = '<p>Please fill out <strong>user</strong> field before sending</p>';
+const messageFieldError = '<p>Please fill out <strong>message</strong> field before sending</p>';
+
+function addAlert (text) {
+    $('.alert').html(
+        `${text} <p class='alert-banner-close'><strong>X</strong></p>`
+    );
+};

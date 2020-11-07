@@ -1135,7 +1135,7 @@ hr {
 }
 
 .stats-name {
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 700;
   color: #7477BF;
   text-transform: inherit;
@@ -1291,6 +1291,14 @@ button {
 }
 .alert-banner-close {
   cursor: pointer;
+}
+
+.error {
+  background-color: #C55267;
+}
+
+.success {
+  background-color: #81c98f;
 }
 
 .switch-light {
@@ -1709,7 +1717,7 @@ main {
 }
 
 .traffic-nav {
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-weight: 500;
   display: flex;
   padding: 0;

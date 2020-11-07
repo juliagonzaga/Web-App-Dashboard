@@ -1,8 +1,5 @@
-//appends HTML for alert banner
-$('.alert').html(    
-    `<p><strong>Alert</strong> You have <strong>6</strong> overdue tasks to complete.</p>
-     <p class='alert-banner-close'>X</p>`
-);
+//alert banner
+addAlert(alertOnLoad);
 
 //enables user to hide the alert banner
 $('.alert').on('click', 'p', function(){
@@ -45,7 +42,7 @@ $(document).click(function() {
 });
 
 
-//adds an 'active'class for the clicked nav link
+//displays only the selected line graph
 $('.traffic-nav').on('click', 'li', function(){
 
     $('.traffic-nav__link').each(function(){
@@ -67,6 +64,32 @@ $('.traffic-nav').on('click', 'li', function(){
     else if ($time === 'Monthly') {
         updateChart(moData, moLabel, moMax, moStep);
     }
+});
+
+$('#send').on('click', function(){
+    const $user = $('#userField').val();
+    const $message = $('#messageField').val();
+    const $alert = $('.alert');
+    $alert.removeClass('success error');
+    $alert.show();
+
+    if ($user === '' && $message === '') {
+        $alert.addClass('error');
+        addAlert(userError);
+    } else if ($user === '') {
+        $alert.addClass('error');
+        addAlert(userFieldError);
+    } else if ($message === '') {
+        $alert.addClass('error');
+        addAlert(messageFieldError);
+    } else {
+        $alert.addClass('success');
+        $alert.html(    
+            `<p> Message successfully sent to: <strong> ${$user} </strong></p>
+            <p class='alert-banner-close'><strong>X</strong></p>`
+        )
+    }
+    $('#form')[0].reset();
 });
 
 //--------------- LINE CHART ---------------//
@@ -170,8 +193,8 @@ let doughnutChart = new Chart($('#mobile-users-chart'), {
         legend : {
             position: 'right',
             labels: {
-                boxWidth: 14,
-                fontSize: 14
+                boxWidth: 12,
+                fontSize: 12
             }
         },
         rotation: -0.7 * Math.PI

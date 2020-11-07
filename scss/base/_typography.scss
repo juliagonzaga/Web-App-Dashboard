@@ -50,7 +50,7 @@
 
 .stats-name {
     @extend %marginZero;
-    @include fontStyle (.8em, 700);
+    @include fontStyle (.9em, 700);
     color: $color-primary;
     text-transform: inherit;
 

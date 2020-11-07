@@ -40,7 +40,7 @@
 }
 
 .traffic-nav {
-    @include fontStyle (.6em, 500);
+    @include fontStyle (.7em, 500);
     @extend %marginZero;
     @include flexy;
     padding: 0;

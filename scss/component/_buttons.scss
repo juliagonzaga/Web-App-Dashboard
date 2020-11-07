@@ -100,6 +100,14 @@ button {
     }
 }
 
+.error {
+    background-color: $color-error;
+}
+
+.success {
+    background-color: $color-accent;
+}
+
 //====================SWITCH-LIGHT======================//
 .switch-light {
     @include grids ($t-columns: repeat(2, 1fr), $align: center);
