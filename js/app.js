@@ -1,5 +1,7 @@
-//alert banner
-addAlert(alertOnLoad);
+$(document ).ready(function() {
+    applySettings();
+    addAlert(alertOnLoad);
+});
 
 //enables user to hide the alert banner
 $('.alert').on('click', 'p', function(){
@@ -90,6 +92,20 @@ $('#send').on('click', function(){
         )
     }
     $('#form')[0].reset();
+    $(window).scrollTop(0);
+});
+
+$('#save').on('click', function(){
+    const email = $('#send-email').prop('checked');
+    const profile = $('#send-profile').prop('checked');
+    const timezone = $('#timezone').val();
+
+    updateSettings(email, profile, timezone);
+});
+
+$('#cancel').on('click', function(){
+    resetSettings();
+    applySettings();
 });
 
 //--------------- LINE CHART ---------------//

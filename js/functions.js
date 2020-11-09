@@ -36,3 +36,31 @@ function addAlert (text) {
         `${text} <p class='alert-banner-close'><strong>X</strong></p>`
     );
 };
+
+let settings = {
+    email: false,
+    profile: false,
+    timezone: 'Select a Timezone'
+};
+
+function updateSettings (email, profile, timezone) {
+    settings.email = email;
+    settings.profile = profile;
+    settings.timezone = timezone;
+};
+
+function resetSettings () {
+    settings.email = false;
+    settings.profile = false;
+    settings.timezone = 'Select a Timezone';
+};
+
+function applySettings () {
+    const email = settings.email;
+    const profile = settings.profile;
+    const timezone = settings.timezone;
+
+    $('#send-email').prop('checked', email);
+    $('#send-profile').prop('checked', profile);
+    $('#timezone').val(timezone);
+};
