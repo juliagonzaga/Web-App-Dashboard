@@ -99,14 +99,25 @@ $('#save').on('click', function(){
     const email = $('#send-email').prop('checked');
     const profile = $('#send-profile').prop('checked');
     const timezone = $('#timezone').val();
-
-    updateSettings(email, profile, timezone);
+    
+    updateSettings({email, profile, timezone});
 });
 
 $('#cancel').on('click', function(){
-    resetSettings();
+    clearSettings();
     applySettings();
 });
+
+// let names = [
+//     Kier Borromeo
+
+// ]
+
+// $('#userField').on('keyup', function(){
+//     const letter = $(this).val();
+
+// });
+
 
 //--------------- LINE CHART ---------------//
 //------------------------------------------//

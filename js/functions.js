@@ -37,28 +37,31 @@ function addAlert (text) {
     );
 };
 
-let settings = {
-    email: false,
-    profile: false,
-    timezone: 'Select a Timezone'
+function updateSettings (newSettings) {
+    localStorage.setItem('settings', JSON.stringify(newSettings));
 };
 
-function updateSettings (email, profile, timezone) {
-    settings.email = email;
-    settings.profile = profile;
-    settings.timezone = timezone;
+function getSettings () {
+    let newSettings = JSON.parse(localStorage.getItem('settings'));
+
+    if (newSettings) {
+        return newSettings;
+    };
 };
 
-function resetSettings () {
-    settings.email = false;
-    settings.profile = false;
-    settings.timezone = 'Select a Timezone';
+function clearSettings () {
+    updateSettings({
+        email: false,
+        profile: false,
+        timezone: 'Select a Timezone'
+    });
 };
 
 function applySettings () {
-    const email = settings.email;
-    const profile = settings.profile;
-    const timezone = settings.timezone;
+    const newSettings = getSettings();
+    const email = newSettings.email;
+    const profile = newSettings.profile;
+    const timezone = newSettings.timezone;
 
     $('#send-email').prop('checked', email);
     $('#send-profile').prop('checked', profile);
