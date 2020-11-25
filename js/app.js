@@ -120,13 +120,19 @@ $('#userField').on('input', function() {
     clearList();
     
     if ($input) {
-        users.forEach(function(val){
-            const $name = val.toLowerCase();
+        users.forEach(function(name){
+            const $name = name.toLowerCase();
             if ($name.substr(0, $input.length) === $input) {
-                let $match = `<strong>${val.substr(0, $input.length)}</strong>`;
-                    $match += val.substr($input.length);
+                let $match = `<strong>${name.substr(0, $input.length)}</strong>`;
+                    $match += name.substr($input.length);
                 $('.autocomplete-list').append(`<li>${$match}</li>`);
                 $('.autocomplete-items').show();
+
+                $('.autocomplete-list li').on('click', function() {
+                    $('#userField').val(`${$(this).text()}`);
+                    $('.autocomplete-items').hide();
+                    clearList();
+                });
             };
         });
     };
