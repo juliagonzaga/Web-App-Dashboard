@@ -115,9 +115,9 @@ $('.autocomplete').append(`
     </div>`);
 
 $('#userField').on('input', function() {
-    clearList();
-    $('.autocomplete-items').hide();
     const $input = $(this).val().toLowerCase().trim();
+    $('.autocomplete-items').hide();
+    clearList();
     
     if ($input) {
         users.forEach(function(val){
