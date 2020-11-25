@@ -123,7 +123,9 @@ $('#userField').on('input', function() {
         users.forEach(function(val){
             const $name = val.toLowerCase();
             if ($name.substr(0, $input.length) === $input) {
-                $('.autocomplete-list').append(`<li>${val}</li>`);
+                let $match = `<strong>${val.substr(0, $input.length)}</strong>`;
+                    $match += val.substr($input.length);
+                $('.autocomplete-list').append(`<li>${$match}</li>`);
                 $('.autocomplete-items').show();
             };
         });

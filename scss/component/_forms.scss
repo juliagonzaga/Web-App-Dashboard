@@ -21,7 +21,6 @@
 
 .autocomplete {
     position: relative;
-    @include fontStyle (.9em);
 
     &-items {
         position: absolute;
