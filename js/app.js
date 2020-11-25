@@ -11,7 +11,7 @@ $('.alert').on('click', 'p', function(){
 })
 
 //toggles notification -- hide/ show
-$('.bell').on ('click', function(e){
+$('.bell').on ('click', function(e) {
     e.stopPropagation();
     $('.bell').toggleClass('active');
     $('#badge').hide();
@@ -24,7 +24,7 @@ $('.bell').on ('click', function(e){
 });
 
 //closes selected notification
-$('.notifications').on ('click', 'p', function(e){
+$('.notifications').on ('click', 'p', function(e) {
     e.stopPropagation();
 
     if ($(this).hasClass('notification-close')) {
@@ -45,7 +45,7 @@ $(document).click(function() {
 
 
 //displays only the selected line graph
-$('.traffic-nav').on('click', 'li', function(){
+$('.traffic-nav').on('click', 'li', function() {
 
     $('.traffic-nav__link').each(function(){
         $(this).removeClass('active');
@@ -68,7 +68,9 @@ $('.traffic-nav').on('click', 'li', function(){
     }
 });
 
-$('#send').on('click', function(){
+
+//message user
+$('#send').on('click', function() {
     const $user = $('#userField').val();
     const $message = $('#messageField').val();
     const $alert = $('.alert');
@@ -95,7 +97,41 @@ $('#send').on('click', function(){
     $(window).scrollTop(0);
 });
 
-$('#save').on('click', function(){
+//message user field
+let users = [
+    'Kier Borromeo',
+    'Jess Vista',
+    'Gama Rae',
+    'JC Ricaro',
+    'Ryan Gunawardana',
+    'Melisa Mei',
+    'Jayson Ignalig',
+    'Adrian Jay'
+];
+
+$('.autocomplete').append(`
+    <div class="autocomplete-items" style="display: none;">
+        <ul class="autocomplete-list"></ul>
+    </div>`);
+
+$('#userField').on('input', function() {
+    clearList();
+    $('.autocomplete-items').hide();
+    const $input = $(this).val().toLowerCase().trim();
+    
+    if ($input) {
+        users.forEach(function(val){
+            const $name = val.toLowerCase();
+            if ($name.substr(0, $input.length) === $input) {
+                $('.autocomplete-list').append(`<li>${val}</li>`);
+                $('.autocomplete-items').show();
+            };
+        });
+    };
+});
+
+//settings
+$('#save').on('click', function() {
     const email = $('#send-email').prop('checked');
     const profile = $('#send-profile').prop('checked');
     const timezone = $('#timezone').val();
@@ -103,21 +139,10 @@ $('#save').on('click', function(){
     updateSettings({email, profile, timezone});
 });
 
-$('#cancel').on('click', function(){
+$('#cancel').on('click', function() {
     clearSettings();
     applySettings();
 });
-
-// let names = [
-//     Kier Borromeo
-
-// ]
-
-// $('#userField').on('keyup', function(){
-//     const letter = $(this).val();
-
-// });
-
 
 //--------------- LINE CHART ---------------//
 //------------------------------------------//

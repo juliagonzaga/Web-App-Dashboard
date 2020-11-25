@@ -67,3 +67,7 @@ function applySettings () {
     $('#send-profile').prop('checked', profile);
     $('#timezone').val(timezone);
 };
+
+function clearList () {
+    $('.autocomplete-list').empty();
+};
