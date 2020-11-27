@@ -98,6 +98,7 @@ $('#send').on('click', function() {
 });
 
 //message user field
+let currentFocus = 0;
 let users = [
     'Kier Borromeo',
     'Jess Vista',
@@ -135,6 +136,22 @@ $('#userField').on('input', function() {
                 });
             };
         });
+    };
+});
+
+$('#userField').on('keydown', function(e) {
+    const $list = $('.autocomplete-list li');
+
+    if ($('.autocomplete-items').is(':visible')) {
+        if (e.keyCode === 40) {
+            addActive($list);
+            currentFocus++;
+        } else if (e.keyCode === 38) {
+            currentFocus--;
+            addActive($list);
+        } else if (e.keyCode === 13) {
+            e.preventDefault();
+        };
     };
 });
 

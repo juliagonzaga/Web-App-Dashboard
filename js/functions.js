@@ -71,3 +71,17 @@ function applySettings () {
 function clearList () {
     $('.autocomplete-list').empty();
 };
+
+function addActive (list) {
+    list.removeClass('active');
+    
+    if (currentFocus >= list.length) {
+        currentFocus = 0;
+    };
+    
+    if (currentFocus < 0) {
+        currentFocus = (list.length - 1);
+    };
+
+    $(list[currentFocus]).addClass('active');
+};

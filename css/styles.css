@@ -1374,7 +1374,7 @@ button {
 .autocomplete-list li:not(:last-child) {
   border-bottom: 1px solid #d4d4d4;
 }
-.autocomplete-list li:hover {
+.autocomplete-list li:hover, .autocomplete-list li.active {
   background-color: #dddeef;
 }
 

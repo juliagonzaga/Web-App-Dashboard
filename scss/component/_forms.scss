@@ -49,9 +49,11 @@
             border-bottom: 1px solid $color-light-gray;
         };
         
-        &:hover {
+        &:hover,
+        &.active {
             background-color: $color-hover;
         };
+
     };
 };
 
