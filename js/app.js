@@ -3,13 +3,6 @@ $(document ).ready(function() {
     addAlert(alertOnLoad);
 });
 
-//enables user to hide the alert banner
-$('.alert').on('click', 'p', function(){
-    if ($(this).hasClass('alert-banner-close')) {
-        $(this).parent().hide();
-    }
-})
-
 //toggles notification -- hide/ show
 $('.bell').on ('click', function(e) {
     e.stopPropagation();
@@ -35,6 +28,13 @@ $('.notifications').on ('click', 'p', function(e) {
     if ($notifList.length === 0) {
         $('.notifications').html(`<p>No notifications.</p>`);
     }
+});
+
+//enables user to hide the alert banner
+$('.alert').on('click', 'p', function(){
+    if ($(this).hasClass('alert-banner-close')) {
+        $(this).parent().hide();
+    };
 });
 
 //closes notification box whenever the user clicks outside of the box
@@ -68,36 +68,7 @@ $('.traffic-nav').on('click', 'li', function() {
     }
 });
 
-
-//message user
-$('#send').on('click', function() {
-    const $user = $('#userField').val();
-    const $message = $('#messageField').val();
-    const $alert = $('.alert');
-    $alert.removeClass('success error');
-    $alert.show();
-
-    if ($user === '' && $message === '') {
-        $alert.addClass('error');
-        addAlert(userError);
-    } else if ($user === '') {
-        $alert.addClass('error');
-        addAlert(userFieldError);
-    } else if ($message === '') {
-        $alert.addClass('error');
-        addAlert(messageFieldError);
-    } else {
-        $alert.addClass('success');
-        $alert.html(    
-            `<p> Message successfully sent to: <strong> ${$user} </strong></p>
-            <p class='alert-banner-close'><strong>X</strong></p>`
-        )
-    }
-    $('#form')[0].reset();
-    $(window).scrollTop(0);
-});
-
-//message user field
+//autocomplete message user field
 let currentFocus = 0;
 let users = [
     'Kier Borromeo',
@@ -153,6 +124,33 @@ $('#userField').on('keydown', function(e) {
             e.preventDefault();
         };
     };
+});
+
+//send message to user
+$('#send').on('click', function() {
+    const $user = $('#userField').val();
+    const $message = $('#messageField').val();
+    const $alert = $('.alert');
+    $alert.removeClass('success error');
+    $alert.show();
+
+    if ($user === '' && $message === '') {
+        $alert.addClass('error');
+        addAlert(userError);
+    } else if ($user === '' || !users.includes($user)) {
+        $alert.addClass('error');
+        addAlert(userFieldError);
+    } else if ($message === '') {
+        $alert.addClass('error');
+        addAlert(messageFieldError);
+    } else {
+        $alert.addClass('success');
+        $alert.html(    
+            `<p> Message successfully sent to: <strong> ${$user} </strong></p>
+            <p class='alert-banner-close'><strong>X</strong></p>`
+        )
+    };
+    $(window).scrollTop(0);
 });
 
 //settings

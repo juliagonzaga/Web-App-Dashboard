@@ -7,11 +7,11 @@ button {
     text-transform: uppercase;
     background-color: $color-primary;
     cursor: pointer;
-}
+};
 
 .settings-button {
     @include grids ($t-columns: repeat(2, 1fr), $gap: 12px);
-}
+};
 
 //====================NOTIFICATIONS======================//
 .bell {
@@ -25,14 +25,14 @@ button {
     @include mq($desktop) {
         @include paddings (6px, 8px);
         @include size (35px, 35px);
-    }
-}
+    };
+};
 
 .notifications {
-    @include fontStyle (.7em);
-    @include paddings ($left: 12px, $right: 12px);
-    position: absolute;
-    left: -22px;
+    @include fontStyle (.7em); 
+    @include paddings ($left: 12px, $right: 12px); 
+    position: absolute; 
+    left: -22px; 
     z-index: 1;
     min-width: 200px;
     color: $color-gray;
@@ -55,21 +55,21 @@ button {
                 @include fontStyle (2em);
                 content: '\2022';
                 color: $color-accent;
-            }
+            };
 
             > p {
                 @include paddings ($top: 12px, $bottom: 12px);
                 @include fontStyle (12px);
                 margin: 0;
 
-            }
-        }
-    }
-}
+            };
+        };
+    };
+};
 
 .notification-close {
     justify-self: end;
-}
+};
 
 //====================ALERT======================//
 .alert {
@@ -83,50 +83,54 @@ button {
 
     @include mq($tablet) {
         @include fontStyle (.9em);
-    }
+    };
 
     @include mq($desktop) {
         @include fontStyle (.9em, 400);
         margin: 20px 16px 20px 16px;
         padding: 12px;
-    }
+    };
 
     > p {
         @extend %marginZero;
-    }
+    };
 
     &-banner-close {
         cursor: pointer;
-    }
-}
+    };
+};
 
 .error {
     background-color: $color-error;
-}
+};
 
 .success {
     background-color: $color-accent;
-}
+};
 
 //====================SWITCH-LIGHT======================//
+.switch {
+    @include flexy($justify: space-between, $align: center);
+};
+
 .switch-light {
-    @include grids ($t-columns: repeat(2, 1fr), $align: center);
     @include fontStyle (.8em);
     color: $color-gray;
-}
+};
 
 .switch-ios.switch-light > span {
     @include size ($w: 70px);
-}
+    margin-right: 20px;
+};
 
 .switch-ios.switch-light input:checked ~ span {
     box-shadow: inset 0 0 0 30px $color-primary;
 
     a {
         border-color: $color-primary;
-    }
-}
+    };
+};
 
 .switch-ios.switch-light a {
     border: 0.25em solid #7477bf;
-}
+};

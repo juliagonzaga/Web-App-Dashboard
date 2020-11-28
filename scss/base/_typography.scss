@@ -4,12 +4,12 @@
 
     > span {
         @include fontStyle ($weight: 700);
-    }
+    };
 
     @include mq($desktop) {
         @include fontStyle (1.7em);
-    }
-}
+    };
+};
 
 .profile-name {
     @extend %marginZero;
@@ -19,8 +19,8 @@
     @include mq($desktop) {
         @include paddings ($left: 8px);
         @include fontStyle (1em);
-    }
-}
+    };
+};
 
 .main-header__title {
     @extend %marginZero;
@@ -32,8 +32,8 @@
     @include mq($desktop) {
         @include paddings ($right: 16px, $left: 16px);
         @include fontStyle (1.3em);
-    }
-}
+    };
+};
 
 .title {
     @extend %marginZero;
@@ -45,8 +45,8 @@
     @include mq($desktop) {
         @include paddings ($bottom: 20px);
         @include fontStyle (1em);
-    }
-}
+    };
+};
 
 .stats-name {
     @extend %marginZero;
@@ -56,8 +56,8 @@
 
     @include mq($desktop) {
         @include fontStyle (.9em);
-    }
-}
+    };
+};
 
 .stats-num {
     @extend %marginZero;
@@ -66,8 +66,8 @@
 
     @include mq($desktop) {
         @include fontStyle (2.1em);
-    }
-}
+    };
+};
 
 .members-info > a {
     @include fontStyle (.8em);
@@ -76,8 +76,8 @@
 
     @include mq($tablet) {
         @include fontStyle (.9em);
-    }
-}
+    };
+};
 
 .name {
     @extend %marginZero;
@@ -85,8 +85,8 @@
 
     @include mq($tablet) {
         @include fontStyle (.9em);
-    }
-}
+    };
+};
 
 .time {
     @extend %marginZero;
@@ -94,5 +94,10 @@
 
     @include mq($tablet) {
         @include fontStyle (.8em);
-    }
-}
+    };
+};
+
+.switch-text {
+    @include fontStyle (.9em);
+    color: $color-gray;
+};

@@ -7,7 +7,7 @@
     font-weight: $weight;
     line-height: $height;
     font-family: $family;
-}
+};
 
 @mixin flexy (
     $display: flex,
@@ -20,7 +20,7 @@
     align-items: $align;
     flex-direction: $direction;
     flex-wrap: $wrap;
-}
+};
 
 @mixin grids (
     $display: grid,
@@ -35,11 +35,11 @@
     align-items: $align;
     grid-column-gap: $gap;
     grid-template-areas: $t-areas;
-}
+};
 
 %marginZero {
     margin: 0;
-}
+};
 
 @mixin paddings (
     $top: null,
@@ -50,21 +50,21 @@
     padding-right: $right;
     padding-bottom: $bottom;
     padding-left: $left; 
-}
+};
 
 @mixin size (
     $w: null,
     $h: null) {
     width: $w;
     height: $h;
-}
+};
 
 %calcPaddings {
     @include paddings ($bottom: calc(20px - 12px));
-}
+};
 
 @mixin mq($width) {
     @media (min-width: $width) {
       @content;
-    }
-}
+    };
+};

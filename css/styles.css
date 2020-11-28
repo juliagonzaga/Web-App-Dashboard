@@ -1188,6 +1188,11 @@ hr {
   }
 }
 
+.switch-text {
+  font-size: 0.9em;
+  color: gray;
+}
+
 button {
   font-size: 0.8em;
   font-weight: 600;
@@ -1301,16 +1306,20 @@ button {
   background-color: #81c98f;
 }
 
-.switch-light {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.switch {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+.switch-light {
   font-size: 0.8em;
   color: gray;
 }
 
 .switch-ios.switch-light > span {
   width: 70px;
+  margin-right: 20px;
 }
 
 .switch-ios.switch-light input:checked ~ span {

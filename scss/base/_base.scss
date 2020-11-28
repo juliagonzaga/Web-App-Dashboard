@@ -2,40 +2,40 @@
 *:before, 
 *:after {
     box-sizing: border-box;
-}
+};
 
 body {
     font: 1em/1em $lato;
-}
+};
 
 ::placeholder {
     color: $color-silver;
-}
+};
 
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration {
   display: none;
-}
+};
 
 hr {
     @extend %marginZero;
     @include size ($h: 1px);
     background-color: #dcdcdc;
     border: none;
-}
+};
 
 .form-field {
     -moz-appearance:none; /* Firefox */
     -webkit-appearance:none; /* Safari and Chrome */
     appearance:none;
-}
+};
 
 .grid-container {
     @include grids (grid, 100%, auto, $t-areas: 'header' 'nav' 'main');
     
     @include mq($tablet) {
         @include grids (grid, 60px 1fr, $t-areas: 'header header' 'nav main');
-    }
-}
+    };
+};
